@@ -7,6 +7,12 @@
    padding: 0 40px;
  }
 
+ .sec-warm {
+   background: linear-gradient(to bottom, #fdfcf9, #f9f7f2);
+   border-top: 1px solid #edede9;
+   border-bottom: 1px solid #edede9;
+ }
+
  .w-narrow {
    max-width: 1100px;
    margin: 0 auto;
@@ -40,6 +46,42 @@
  .d4 {
    transition-delay: .32s;
  }
+
+ .na2-arrivals-track .na2-card {
+   min-width: 300px;
+   flex-shrink: 0;
+   scroll-snap-align: start;
+ }
+
+ .na2-arr-btns {
+   display: flex;
+   gap: 12px;
+ }
+
+ .na2-arr-btn {
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   border: 1.5px solid #edede9;
+   background: var(--white);
+   color: var(--teal);
+   font-size: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all .3s var(--ease);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+ }
+
+ .na2-arr-btn:hover {
+   border-color: var(--teal);
+   background: var(--teal);
+   color: var(--white);
+   transform: scale(1.1);
+   box-shadow: 0 8px 20px rgba(0, 79, 105, 0.2);
+ }
+
 
  /* ══════════════════════════════════════════
    BUTTONS
@@ -847,19 +889,19 @@
    margin-bottom: 12px;
  }
 
-  .na2-eyebrow-bar {
-    width: 18px;
-    height: 1.5px;
-    background: var(--terra);
-  }
+ .na2-eyebrow-bar {
+   width: 18px;
+   height: 1.5px;
+   background: var(--terra);
+ }
 
-  .na2-eyebrow-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--terra);
-  }
+ .na2-eyebrow-label {
+   font-size: 10px;
+   font-weight: 700;
+   letter-spacing: .2em;
+   text-transform: uppercase;
+   color: var(--terra);
+ }
 
  .na2-sh-title {
    font-family: var(--serif);
@@ -870,20 +912,20 @@
    letter-spacing: -.02em;
  }
 
-  .na2-sh-title em {
+ .na2-sh-title em {
    font-style: italic;
    color: var(--teal);
  }
 
-  .na2-sh-title.white {
+ .na2-sh-title.white {
    color: var(--white);
  }
 
-  .na2-sh-title.white em {
+ .na2-sh-title.white em {
    color: var(--gold);
  }
 
-  .na2-sh-sub {
+ .na2-sh-sub {
    font-size: 14px;
    font-weight: 300;
    color: var(--ink-mid);
@@ -892,7 +934,7 @@
    line-height: 1.75;
  }
 
-  .na2-sh-sub.white {
+ .na2-sh-sub.white {
    color: rgba(255, 255, 255, .55);
  }
 
@@ -1034,17 +1076,20 @@
  }
 
  .na2-card {
-   background: var(--ivory);
-   border-radius: 16px;
+   background: var(--white);
+   border: 2px solid #edede9;
+   border-radius: 20px;
    overflow: hidden;
    cursor: pointer;
-   transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+   transition: all .4s var(--ease);
    position: relative;
+   padding-bottom: 20px;
  }
 
  .na2-card:hover {
-   transform: translateY(-6px);
-   box-shadow: 0 20px 48px rgba(0, 0, 0, .1);
+   border-color: var(--teal);
+   transform: translateY(-8px);
+   box-shadow: 0 20px 40px rgba(0, 79, 105, 0.08);
  }
 
  .na2-card-img {
@@ -1055,7 +1100,7 @@
 
  .na2-card-img-inner {
    width: 100%;
-   height: 100%;
+   height: 300px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -1365,11 +1410,12 @@
 ══════════════════════════════════════════ */
  .na2-arrivals-track {
    display: flex;
-   gap: 18px;
+   gap: 24px;
    overflow-x: auto;
    scrollbar-width: none;
-   padding: 6px 2px 20px;
+   padding: 20px 2px 40px;
    scroll-snap-type: x mandatory;
+   scroll-behavior: smooth;
  }
 
  .na2-arrivals-track::-webkit-scrollbar {
@@ -1377,7 +1423,8 @@
  }
 
  .na2-arrivals-track .na2-card {
-   min-width: 256px;
+   min-width: 300px;
+   width: 300px;
    flex-shrink: 0;
    scroll-snap-align: start;
  }
@@ -2839,21 +2886,21 @@
    gap: 8px;
  }
 
-  .f-atc-btn {
-    background: var(--teal);
-    color: var(--white);
-    font-weight: 700;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    white-space: nowrap;
-    border: none;
-    border-radius: 4px;
-    padding: 12px 28px;
-    font-family: var(--sans);
-    font-size: 12px;
-    transition: all .2s;
-  }
+ .f-atc-btn {
+   background: var(--teal);
+   color: var(--white);
+   font-weight: 700;
+   letter-spacing: .1em;
+   text-transform: uppercase;
+   cursor: pointer;
+   white-space: nowrap;
+   border: none;
+   border-radius: 4px;
+   padding: 12px 28px;
+   font-family: var(--sans);
+   font-size: 12px;
+   transition: all .2s;
+ }
 
  .f-atc-btn:hover {
    background: var(--teal-mid);
@@ -3099,21 +3146,21 @@
    gap: 24px;
  }
 
-  .bs-card {
-    background: var(--white);
-    border: 1.5px solid #eeece8;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    transition: all .45s var(--ease);
-  }
+ .bs-card {
+   background: var(--white);
+   border: 1.5px solid #eeece8;
+   border-radius: 20px;
+   overflow: hidden;
+   cursor: pointer;
+   position: relative;
+   transition: all .45s var(--ease);
+ }
 
-  .bs-card:hover {
-    border-color: var(--teal);
-    transform: translateY(-12px);
-    box-shadow: 0 30px 60px rgba(31, 45, 28, 0.12);
-  }
+ .bs-card:hover {
+   border-color: var(--teal);
+   transform: translateY(-12px);
+   box-shadow: 0 30px 60px rgba(31, 45, 28, 0.12);
+ }
 
  .bs-card-img {
    aspect-ratio: 1;
@@ -3137,6 +3184,12 @@
  }
 
  .bs-card-img-inner img {
+   padding: 15px;
+ }
+
+ .na2-card-img-inner img {
+   height: 290px;
+   object-fit: cover;
    padding: 15px;
  }
 
@@ -3230,19 +3283,19 @@
    transition: all .25s var(--ease);
  }
 
-  .bs-card-wish:hover {
-    background: var(--gold);
-    color: var(--white);
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(195, 147, 63, 0.2);
-  }
+ .bs-card-wish:hover {
+   background: var(--gold);
+   color: var(--white);
+   transform: scale(1.1);
+   box-shadow: 0 10px 25px rgba(195, 147, 63, 0.2);
+ }
 
-  .bs-card-list:hover {
-    background: var(--teal);
-    color: var(--white);
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 79, 105, 0.2);
-  }
+ .bs-card-list:hover {
+   background: var(--teal);
+   color: var(--white);
+   transform: scale(1.1);
+   box-shadow: 0 10px 25px rgba(0, 79, 105, 0.2);
+ }
 
  .bs-card-body {
    padding: 20px 20px 24px;

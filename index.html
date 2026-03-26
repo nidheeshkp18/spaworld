@@ -1291,8 +1291,9 @@
         <div class="na2-arrivals-track" id="na2-atrack">
           <div class="na2-card">
             <div class="na2-card-img">
-              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#A8B4C5,#2C3E50);">⚡</div><span
-                class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#A8B4C5,#2C3E50);">
+                <img src="assets/img/png/Premium Electric Spa Table.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Spa Equipment</div>
@@ -1304,8 +1305,9 @@
           </div>
           <div class="na2-card">
             <div class="na2-card-img">
-              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#C4D5A8,#595F39);">🌿</div><span
-                class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#C4D5A8,#595F39);">
+                <img src="assets/img/png/Ayurvedic Herbal Compress Bags.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Disposables</div>
@@ -1317,8 +1319,9 @@
           </div>
           <div class="na2-card">
             <div class="na2-card-img">
-              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#D5C4B4,#B89B82);">🫧</div><span
-                class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#D5C4B4,#B89B82);">
+                <img src="assets/img/png/Mineral Salt Body Scrub.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Body Care</div>
@@ -1330,8 +1333,9 @@
           </div>
           <div class="na2-card">
             <div class="na2-card-img">
-              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#D5C4A8,#8B6E52);">🪵</div><span
-                class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#D5C4A8,#8B6E52);">
+                <img src="assets/img/png/Cedar Sauna Bench Seat.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Sauna</div>
@@ -1343,8 +1347,9 @@
           </div>
           <div class="na2-card">
             <div class="na2-card-img">
-              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#A8D5E4,#004F69);">💧</div><span
-                class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#A8D5E4,#004F69);">
+                <img src="assets/img/png/Ultrasonic Aroma Diffuser 500ml.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Aromatherapy</div>
@@ -1356,8 +1361,9 @@
           </div>
           <div class="na2-card">
             <div class="na2-card-img">
-              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#E4D0B4,#E8A020);">🏮</div><span
-                class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#E4D0B4,#E8A020);">
+                <img src="assets/img/png/Copper Oil Burner.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Hotel Décor</div>
@@ -2591,6 +2597,10 @@
     // Arrivals scroll
     document.getElementById('aleft')?.addEventListener('click', () => document.getElementById('atrack').scrollBy({ left: -280, behavior: 'smooth' }));
     document.getElementById('aright')?.addEventListener('click', () => document.getElementById('atrack').scrollBy({ left: 280, behavior: 'smooth' }));
+
+    // Arrivals 2 scroll
+    document.getElementById('na2-aleft')?.addEventListener('click', () => document.getElementById('na2-atrack').scrollBy({ left: -320, behavior: 'smooth' }));
+    document.getElementById('na2-aright')?.addEventListener('click', () => document.getElementById('na2-atrack').scrollBy({ left: 320, behavior: 'smooth' }));
 
     // Quantity
     function chQty(d) { const el = document.getElementById('qtyV'); if (!el) return; let v = parseInt(el.textContent) + d; el.textContent = Math.max(1, Math.min(99, v)); }
