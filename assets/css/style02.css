@@ -870,20 +870,20 @@
    letter-spacing: -.02em;
  }
 
- .sh-title em {
+  .na2-sh-title em {
    font-style: italic;
    color: var(--teal);
  }
 
- .sh-title.white {
+  .na2-sh-title.white {
    color: var(--white);
  }
 
- .sh-title.white em {
+  .na2-sh-title.white em {
    color: var(--gold);
  }
 
- .sh-sub {
+  .na2-sh-sub {
    font-size: 14px;
    font-weight: 300;
    color: var(--ink-mid);
@@ -892,7 +892,7 @@
    line-height: 1.75;
  }
 
- .sh-sub.white {
+  .na2-sh-sub.white {
    color: rgba(255, 255, 255, .55);
  }
 
@@ -2839,46 +2839,21 @@
    gap: 8px;
  }
 
- .f-atc-btn {
-   background: var(--teal);
-   color: var(--white);
- }
-
- .na2-sh-title {
-   font-family: var(--serif);
-   font-size: clamp(32px, 3.5vw, 52px);
-   font-weight: 700;
-   line-height: 1.08;
-   color: var(--ink);
-   letter-spacing: -.02em;
- }
-
- .na2-sh-title em {
-   font-style: italic;
-   color: var(--teal);
- }
-
- .na2-sh-title.white {
-   color: var(--white);
- }
-
- .na2-sh-title.white em {
-   color: var(--gold);
- }
- .f-atc-btn {
-   font-weight: 700;
-   letter-spacing: .1em;
-   text-transform: uppercase;
-   cursor: pointer;
-   white-space: nowrap;
-   transition: all .2s;
-   border: none;
-   border-radius: 4px;
-   padding: 12px 28px;
-   font-family: var(--sans);
-   font-size: 12px;
-   transition: all .2s;
- }
+  .f-atc-btn {
+    background: var(--teal);
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 28px;
+    font-family: var(--sans);
+    font-size: 12px;
+    transition: all .2s;
+  }
 
  .f-atc-btn:hover {
    background: var(--teal-mid);
