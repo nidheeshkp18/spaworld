@@ -53,6 +53,134 @@ body {
   padding: 0 40px;
 }
 
+/* ─── MARKETPLACE HERO (EDITORIAL SPLIT) ─── */
+.mkt-hero {
+  background: var(--ink);
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  min-height: 85vh; 
+  position: relative; 
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.mkt-hero-noise {
+  position: absolute; inset: 0; pointer-events: none; opacity: .03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.mkt-hero-orb {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(163,209,224,.12) 0%, transparent 70%);
+}
+.mkt-hero-orb.orb1 { width:600px; height:600px; right:-200px; top:-200px; opacity: 0.05; }
+.mkt-hero-orb.orb2 { width:380px; height:380px; left:30px; bottom:-120px; background:radial-gradient(circle,rgba(195,147,63,.05) 0%,transparent 70%); }
+
+.mkt-hero-l {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px 80px 120px; position: relative; z-index: 2;
+}
+
+.mkt-hero-eyebrow {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 28px;
+  animation: mktFadeUp .7s .1s var(--ease) forwards; opacity: 0;
+}
+.mkt-hero-eyebrow .eyebrow-line { width: 28px; height: 1.5px; background: var(--gold); }
+.mkt-hero-eyebrow .eyebrow-text { font-size: 10.5px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+
+.mkt-hero-h1 { 
+  font-family: var(--font-display); color: var(--white); line-height: 1.05; letter-spacing: -.02em; 
+  animation: mktFadeUp .8s .2s var(--ease) forwards; opacity:0;
+}
+.mkt-hero-h1 .l1 { display:block; font-size: clamp(48px,5.5vw,82px); font-weight:900; }
+.mkt-hero-h1 .l2 { display:block; font-size: clamp(42px,5vw,72px); font-weight:400; font-style:italic; color:var(--gold); }
+.mkt-hero-h1 .l3 { display:block; font-size: clamp(38px,4.5vw,62px); font-weight:400; }
+
+.mkt-hero-p { 
+  color:rgba(255,255,255,.5); font-size:15px; font-weight:300; line-height:1.85; max-width:440px; margin:28px 0 44px; 
+  animation: mktFadeUp .7s .35s var(--ease) forwards; opacity:0;
+}
+
+.mkt-hero-btns { 
+  display:flex; align-items:center; gap:16px; 
+  animation: mktFadeUp .7s .48s var(--ease) forwards; opacity:0;
+}
+
+.mkt-hero-stats { 
+  display:flex; gap:48px; margin-top:64px; padding-top:40px; border-top:1px solid rgba(255,255,255,.1); 
+  animation: mktFadeUp .7s .6s var(--ease) forwards; opacity:0;
+}
+.mkt-hero-stats .stat-n { font-family: var(--font-display); font-size:36px; font-weight:700; color:var(--white); line-height:1; }
+.mkt-hero-stats .stat-u { font-size:18px; color:var(--gold); margin-left:2px; }
+.mkt-hero-stats .stat-l { font-size:10.5px; color:rgba(255,255,255,.4); letter-spacing:.05em; margin-top:6px; text-transform:uppercase; font-weight:600; }
+
+.mkt-hero-r { position:relative; display:flex; align-items:stretch; z-index:2; padding:40px 40px 40px 0; }
+.mkt-hero-mosaic {
+  display: grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr;
+  gap:16px; width:100%;
+}
+
+.hm-tile {
+  border-radius:16px; overflow:hidden; position:relative;
+  display:flex; align-items:center; justify-content:center;
+  animation: mktFadeUp .8s var(--ease) forwards; opacity:0;
+  transition: all .5s var(--ease);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.hm-tile:hover { transform: translateY(-5px) scale(1.01); box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
+.hm-tile.span2 { grid-row:span 2; border-radius:20px; animation-delay:.25s; }
+.hm-tile:nth-child(2){animation-delay:.35s;} .hm-tile:nth-child(3){animation-delay:.45s;}
+
+.tm1{background: linear-gradient(135deg, #133a34, #0a1c1a); border: 1px solid rgba(255,255,255,0.05); } 
+.tm2{background: linear-gradient(135deg, #a68b72, #7a6350); border: 1px solid rgba(255,255,255,0.05); } 
+.tm3{background: linear-gradient(135deg, #3d4a3b, #1f2d1c); border: 1px solid rgba(255,255,255,0.05); }
+
+.hm-emo { 
+  width: 90%; 
+  height: 90%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  transition: transform .5s var(--ease);
+}
+.hm-emo img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
+  filter: drop-shadow(0 15px 35px rgba(0,0,0,0.3));
+}
+.hm-tile:hover .hm-emo { transform: scale(1.08) rotate(2deg); }
+
+.hm-label { 
+  position:absolute; bottom:20px; left:20px; font-size:11px; font-weight:700; 
+  letter-spacing: .08em; text-transform:uppercase; color:rgba(255,255,255,0.9); 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.hm-badge { 
+  position:absolute; top:20px; right:20px; background:var(--gold); color:var(--white); 
+  font-size:9px; font-weight:800; letter-spacing:.1em; padding:5px 12px; 
+  border-radius:20px; text-transform:uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.mkt-hero-scroll { 
+  position:absolute; bottom:32px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; 
+  color:rgba(255,255,255,.3); font-size:9px; letter-spacing:.15em; text-transform:uppercase; z-index:3; 
+  animation: mktFadeUp .7s .8s var(--ease) forwards; opacity:0;
+}
+.mkt-hero-scroll .scroll-bar { width:1px; height:32px; background:rgba(255,255,255,.15); position:relative; overflow:hidden; }
+.mkt-hero-scroll .scroll-bar::after { content:''; position:absolute; top:0; left:0; right:0; height:40%; background:rgba(255,255,255,.5); animation: mktSbar 2s ease-in-out infinite; }
+
+@keyframes mktSbar { 0%{transform:translateY(-100%)} 100%{transform:translateY(250%)} }
+@keyframes mktFadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+@media(max-width:1100px){
+  .mkt-hero{grid-template-columns:1fr; min-height: auto;} 
+  .mkt-hero-r{display:none;}
+  .mkt-hero-l{padding:100px 40px; text-align: center; align-items: center;}
+  .mkt-hero-h1 .l1, .mkt-hero-h1 .l2, .mkt-hero-h1 .l3 { display: inline; font-size: 10vw; }
+  .mkt-hero-p { margin: 24px auto; }
+}
+
 
 /* ─── SHARED UTILITIES ─── */
 .header-flex {

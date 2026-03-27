@@ -7,7 +7,9 @@
   <title>SPA STORE — Premium Spa & Wellness Supplies | UAE · GCC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style01.css">
   <link rel="stylesheet" href="assets/css/style02.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -115,7 +117,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="nav-links-wrap">
             <a href="#" class="nav-l active">Best Sellers</a>
             <a href="#" class="nav-l">New Arrivals</a>
@@ -138,63 +140,77 @@
 ═══════════════════════════════════════ -->
   <div id="page-home" class="page active">
 
-    <!-- ─── MARKETPLACE HERO (Split Layout) ─── -->
-    <div class="marketplace-hero w">
-      <div class="hero-left">
-        <section class="hero-slider">
-          <div class="hero-track" id="heroTrack">
-            <!-- Slide 1 -->
-            <div class="hero-slide hs1">
-              <div class="hero-slide-content">
-                <div class="hs-tag">✨ SPA WORLD 2026</div>
-                <h1 class="hs-headline">Premium <em>Wellness</em> Supplies</h1>
-                <p class="hs-sub">Trusted by top spa resorts & professionals across the GCC region.</p>
-                <div class="hs-btns">
-                  <button class="btn-gold">Shop Collection</button>
-                </div>
-              </div>
-              <div class="hs-visual">
-                <img src="assets/img/png/Premium Electric Spa Table.png" alt="">
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="hero-slide hs2">
-              <div class="hero-slide-content">
-                <div class="hs-tag">🌿 NATURE'S BEST</div>
-                <h1 class="hs-headline">Organic <em>Massage</em> Oils</h1>
-                <p class="hs-sub">100% Pure essential oils for the ultimate therapeutic experience.</p>
-                <div class="hs-btns">
-                  <button class="btn-gold">Explore Range</button>
-                </div>
-              </div>
-              <div class="hs-visual">
-                <img src="assets/img/png/Aromatherapy Massage Oil.png" alt="">
-              </div>
-            </div>
-          </div>
-          <button class="harr prev" onclick="mvSlide(-1)">‹</button>
-          <button class="harr next" onclick="mvSlide(1)">›</button>
-          <div class="hero-dots">
-            <button class="hdot on" onclick="goSl(0)"></button>
-            <button class="hdot" onclick="goSl(1)"></button>
-          </div>
-        </section>
-      </div>
-      <div class="hero-right">
-        <div class="hero-promo-card">
-          <div class="pc-tag">Flash Sale</div>
-          <h5>Limited Offers Up to 30% Off</h5>
-          <a href="#" class="pc-link">Explore →</a>
-          <img src="assets/img/png/Basalt Hot Stone Therapy.png" alt="">
+    <!-- ─── MARKETPLACE HERO (EDITORIAL SPLIT) ─── -->
+    <section class="mkt-hero">
+      <div class="mkt-hero-noise"></div>
+      <div class="mkt-hero-orb orb1"></div>
+      <div class="mkt-hero-orb orb2"></div>
+
+      <div class="mkt-hero-l">
+        <div class="mkt-hero-eyebrow">
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-text">Premium Wellness Supplies · UAE · GCC</span>
         </div>
-        <div class="hero-promo-card hp-gold">
-          <div class="pc-tag">Professional</div>
-          <h5>Equip Your Entire Salon</h5>
-          <a href="#" class="pc-link">Catalogue →</a>
-          <img src="assets/img/png/Mineral Salt Body Scrub.png" alt="">
+        <h1 class="mkt-hero-h1">
+          <span class="l1">Elevate</span>
+          <span class="l2">Every Spa</span>
+          <span class="l3">Experience.</span>
+        </h1>
+        <p class="mkt-hero-p">
+          Professional-grade spa, salon & hotel products trusted by 2,500+ wellness professionals across the UAE and GCC
+          region.
+        </p>
+        <div class="mkt-hero-btns">
+          <a href="#products" class="btn-gold" style="padding:16px 36px;">Shop Best Sellers</a>
+          <a href="#cats" class="btn-outline-dark"
+            style="padding:16px 28px; border: 1.5px solid rgba(255,255,255,0.2); color:white;">Browse Categories</a>
+        </div>
+        <div class="mkt-hero-stats">
+          <div>
+            <div class="stat-n">2,000<span class="stat-u">+</span></div>
+            <div class="stat-l">Happy Clients</div>
+          </div>
+          <div>
+            <div class="stat-n">5,000<span class="stat-u">+</span></div>
+            <div class="stat-l">Active Products</div>
+          </div>
+          <div>
+            <div class="stat-n">6<span class="stat-u">★</span></div>
+            <div class="stat-l">GCC Regions</div>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div class="mkt-hero-r">
+        <div class="mkt-hero-mosaic">
+          <div class="hm-tile span2 tm1">
+            <div class="hm-emo">
+              <img src="assets/img/png/massage-beds-scroll-down.png" alt="">
+            </div>
+            <div class="hm-label">Massage Beds</div>
+            <div class="hm-badge">Flagship</div>
+          </div>
+          <div class="hm-tile tm2">
+            <div class="hm-emo" style="font-size:48px;">
+              <img src="assets/img/png/Stone Therapy.png" alt="">
+            </div>
+            <div class="hm-label">Stone Therapy</div>
+          </div>
+          <div class="hm-tile tm3">
+            <div class="hm-emo" style="font-size:48px;">
+              <img src="assets/img/png/wellness-oil.png" alt="">
+            </div>
+            <div class="hm-label">Wellness Oils</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mkt-hero-scroll">
+        <div class="scroll-bar"></div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
 
     <!-- ─── MARKETPLACE TRUST BAR ─── -->
     <div class="trust-bar w">
@@ -2115,7 +2131,7 @@
     // ALL CATEGORIES TOGGLE (Dropdown Support)
     const deptsBtn = document.getElementById('deptsToggle');
     if (deptsBtn) {
-      deptsBtn.addEventListener('click', function(e) {
+      deptsBtn.addEventListener('click', function (e) {
         if (window.innerWidth <= 1024) {
           this.classList.toggle('is-open'); // Mobile toggle
         }
@@ -2132,4 +2148,5 @@
     }
   </script>
 </body>
+
 </html>
