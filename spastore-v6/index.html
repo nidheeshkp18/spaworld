@@ -6,353 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPA STORE — Premium Spa & Wellness Supplies | UAE · GCC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style01.css">
   <link rel="stylesheet" href="assets/css/style02.css">
-  <style>
-    /* ─── LIMITED OFFERS SECTION (PRO DESIGN) ─── */
-    .lo-sec {
-      background: linear-gradient(135deg, #003548 0%, #002533 100%);
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .lo-sec::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(232, 200, 112, 0.1) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .lo-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 56px;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-
-    .lo-title-wrap {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .lo-eyebrow {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: #e8c870;
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .lo-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 4.5vw, 56px);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-    }
-
-    .lo-title em {
-      font-style: italic;
-      color: #d4e8e4;
-      opacity: 0.9;
-    }
-
-    .lo-timer-wrap {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 24px 40px;
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .lo-timer-label {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.6);
-      letter-spacing: 0.12em;
-    }
-
-    .lo-timer {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .lo-t-unit {
-      text-align: center;
-      min-width: 48px;
-    }
-
-    .lo-t-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: #e8c870;
-      line-height: 1;
-    }
-
-    .lo-t-lab {
-      font-size: 9.5px;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.45);
-      margin-top: 6px;
-    }
-
-    .lo-t-sep {
-      font-size: 28px;
-      color: rgba(255, 255, 255, 0.15);
-      font-weight: 300;
-      margin-top: -14px;
-    }
-
-    .lo-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-    }
-
-    .lo-card {
-      background: #fff;
-      border-radius: 26px;
-      padding: 14px;
-      transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .lo-card:hover {
-      transform: translateY(-14px) scale(1.01);
-      box-shadow: 0 44px 88px rgba(0, 0, 0, 0.35);
-    }
-
-    .lo-card-img {
-      aspect-ratio: 1;
-      border-radius: 20px;
-      background: #f8faf9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 80px;
-      position: relative;
-      overflow: hidden;
-      transition: 0.5s var(--ease);
-    }
-
-    .lo-card:hover .lo-card-img {
-      background: #fff;
-      transform: scale(1.04);
-    }
-
-    .lo-card-img-bg {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle, rgba(0, 79, 105, 0.03) 0%, transparent 70%);
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .lo-card:hover .lo-card-img-bg {
-      opacity: 1;
-    }
-
-    .lo-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: #d56f53;
-      color: #fff;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 7px 16px;
-      border-radius: 40px;
-      z-index: 5;
-      box-shadow: 0 8px 16px rgba(213, 111, 83, 0.3);
-      animation: lo-pulse 2s infinite ease-in-out;
-    }
-
-    @keyframes lo-pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 4px 12px rgba(213, 111, 83, 0.2);
-      }
-
-      50% {
-        transform: scale(1.06);
-        box-shadow: 0 8px 24px rgba(213, 111, 83, 0.4);
-      }
-
-      100% {
-        transform: scale(1);
-        box-shadow: 0 4px 12px rgba(213, 111, 83, 0.2);
-      }
-    }
-
-    .lo-card-body {
-      padding: 22px 10px 14px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .lo-card-cat {
-      font-size: 10px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #d56f53;
-      margin-bottom: 10px;
-    }
-
-    .lo-card-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: #003548;
-      line-height: 1.35;
-      margin-bottom: 18px;
-      transition: color 0.3s;
-    }
-
-    .lo-card:hover .lo-card-name {
-      color: #004f69;
-    }
-
-    .lo-stock {
-      margin-bottom: 22px;
-    }
-
-    .lo-stock-text {
-      font-size: 10.5px;
-      font-weight: 600;
-      color: #7a7a7a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .lo-stock-text b {
-      color: #d56f53;
-      font-weight: 700;
-    }
-
-    .lo-stock-bar {
-      height: 7px;
-      background: #f2f2f2;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-top: 8px;
-      border: 1px solid #ebebeb;
-    }
-
-    .lo-stock-inner {
-      height: 100%;
-      border-radius: 10px;
-      transition: width 1s ease-out;
-      background: linear-gradient(to right, #d56f53, #e8c870);
-    }
-
-    .lo-card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 18px;
-      border-top: 1px solid #f2f2f2;
-      margin-top: auto;
-    }
-
-    .lo-price-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .lo-price-new {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 800;
-      color: #004f69;
-      line-height: 1;
-    }
-
-    .lo-price-old {
-      font-size: 14px;
-      color: #b0b0b0;
-      text-decoration: line-through;
-      font-weight: 400;
-      margin-bottom: 4px;
-    }
-
-    .lo-add-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 16px;
-      border: none;
-      background: #004f69;
-      color: #fff;
-      font-size: 20px;
-      cursor: pointer;
-      transition: all 0.4s var(--ease);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lo-add-btn:hover {
-      background: #e8c870;
-      color: #003548;
-      transform: rotate(90deg) scale(1.1);
-      box-shadow: 0 8px 24px rgba(232, 200, 112, 0.3);
-    }
-
-    @media (max-width: 1100px) {
-      .lo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .lo-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .lo-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-      }
-
-      .lo-timer-wrap {
-        width: 100%;
-        padding: 20px 24px;
-        justify-content: space-between;
-      }
-    }
-
-    .Shopbycollection {
-      height: 255px;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
 </head>
 
 <body>
@@ -363,13 +22,10 @@
     <button class="psb" onclick="goPg('product',this)">🛏 Product Page</button>
   </div>
 
-  <!-- ═══════════════════════════════════════
-     SHARED HEADER
-═══════════════════════════════════════ -->
   <div id="chrome">
 
     <!-- Announcement Bar -->
-    <div class="ann">
+    <div id="siteAnn" class="ann">
       <div class="ann-side">
         <span>📧 info@spastore.me</span>
         <span>📞 +971 58 838 2030</span>
@@ -384,8 +40,9 @@
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header id="siteHdr" class="header">
       <div class="header-top">
+
 
         <!-- Search -->
         <div class="search-bar">
@@ -396,13 +53,13 @@
         <!-- Logo -->
         <div class="logo" onclick="goPg('home',null)">
           <svg class="logo-svg" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="21" cy="21" r="19" fill="#d4e8e4" stroke="#1a4a40" stroke-width="1.5" />
+            <circle cx="21" cy="21" r="19" fill="#efe9db" stroke="#2d7d72" stroke-width="1.5" />
             <path d="M21 7 C21 7, 31 13, 31 21 C31 29, 21 35, 21 35 C21 35, 11 29, 11 21 C11 13, 21 7, 21 7Z"
-              fill="#1a4a40" opacity="0.25" />
-            <circle cx="21" cy="21" r="5" fill="#1a4a40" />
-            <circle cx="21" cy="21" r="2.5" fill="#e8c870" />
-            <path d="M21 7 Q28 14 21 21 Q14 14 21 7Z" fill="#1a4a40" opacity="0.15" />
-            <path d="M11 21 Q18 28 21 21 Q24 28 31 21" stroke="#1a4a40" stroke-width="1" fill="none"
+              fill="#2d7d72" opacity="0.25" />
+            <circle cx="21" cy="21" r="5" fill="#2d7d72" />
+            <circle cx="21" cy="21" r="2.5" fill="#c3933f" />
+            <path d="M21 7 Q28 14 21 21 Q14 14 21 7Z" fill="#2d7d72" opacity="0.15" />
+            <path d="M11 21 Q18 28 21 21 Q24 28 31 21" stroke="#2d7d72" stroke-width="1" fill="none"
               stroke-linecap="round" opacity="0.4" />
           </svg>
           <div class="logo-text-wrap">
@@ -449,46 +106,48 @@
       <!-- Nav Bar -->
       <nav class="nav-bar">
         <div class="nav-inner">
-          <span class="nav-item hot">🔥 Offers</span>
-          <span class="nav-item active">
-            Spa Products <span class="arrow">▾</span>
-            <div class="mega-drop">
-              <div class="mega-col">
-                <h6>All Products</h6>
-                <ul>
-                  <li><a href="#">All Products</a></li>
-                  <li><a href="#">Best Sellers</a></li>
-                  <li><a href="#">New Arrivals</a></li>
-                  <li><a href="#">Gift Sets</a></li>
-                </ul>
+          <div class="nav-links">
+            <span class="nav-item hot">🔥 Offers</span>
+            <span class="nav-item active">
+              Spa Products <span class="arrow">▾</span>
+              <div class="mega-drop">
+                <div class="mega-col">
+                  <h6>All Products</h6>
+                  <ul>
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Gift Sets</a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h6>By Category</h6>
+                  <ul>
+                    <li><a href="#">Massage Beds</a></li>
+                    <li><a href="#">Massage Oils</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Disposables</a></li>
+                    <li><a href="#">Sauna</a></li>
+                    <li><a href="#">Hot Stone Therapy</a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h6>By Concern</h6>
+                  <ul>
+                    <li><a href="#">Pain Relief</a></li>
+                    <li><a href="#">Deep Relaxation</a></li>
+                    <li><a href="#">Aromatherapy</a></li>
+                    <li><a href="#">Detox & Steam</a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="mega-col">
-                <h6>By Category</h6>
-                <ul>
-                  <li><a href="#">Massage Beds</a></li>
-                  <li><a href="#">Massage Oils</a></li>
-                  <li><a href="#">Accessories</a></li>
-                  <li><a href="#">Disposables</a></li>
-                  <li><a href="#">Sauna</a></li>
-                  <li><a href="#">Hot Stone Therapy</a></li>
-                </ul>
-              </div>
-              <div class="mega-col">
-                <h6>By Concern</h6>
-                <ul>
-                  <li><a href="#">Pain Relief</a></li>
-                  <li><a href="#">Deep Relaxation</a></li>
-                  <li><a href="#">Aromatherapy</a></li>
-                  <li><a href="#">Detox & Steam</a></li>
-                </ul>
-              </div>
-            </div>
-          </span>
-          <span class="nav-item">Salon Products <span class="arrow">▾</span></span>
-          <span class="nav-item">Recreation <span class="arrow">▾</span></span>
-          <span class="nav-item">Hotel Products <span class="arrow">▾</span></span>
-          <span class="nav-item">About Us</span>
-          <span class="nav-item">Support</span>
+            </span>
+            <span class="nav-item">Salon Products <span class="arrow">▾</span></span>
+            <span class="nav-item">Recreation <span class="arrow">▾</span></span>
+            <span class="nav-item">Hotel Products <span class="arrow">▾</span></span>
+            <span class="nav-item">About Us</span>
+            <span class="nav-item">Support</span>
+          </div>
           <div class="nav-right-links">
             <span class="nav-offer">🎁 Spring Sale Up to 30% Off</span>
           </div>
@@ -554,7 +213,6 @@
             <img src="assets/img/towels.webp" class="img-fluid " alt="">
           </div>
         </div>
-
       </div>
       <button class="harr prev" onclick="mvSlide(-1)">‹</button>
       <button class="harr next" onclick="mvSlide(1)">›</button>
@@ -694,8 +352,10 @@
               <div class="bs-card-img-inner" style="background:linear-gradient(145deg,#EAD9C0,#B89B82);">
                 <img src="assets/img/png/Portable Massage.png" alt="">
               </div><span class="bs-card-badge bs-badge-sale">−15%</span>
-              <div class="bs-card-overlay"><button class="bs-card-quick-add">🛒 Quick Add</button><button
-                  class="bs-card-wish">♡</button>
+              <div class="bs-card-overlay">
+                <button class="bs-card-quick-add">🛒 Quick Add</button>
+                <button class="bs-card-wish" title="Add to Wishlist">♡</button>
+                <button class="bs-card-list" title="Add to List">📋</button>
               </div>
             </div>
             <div class="bs-card-body">
@@ -714,8 +374,10 @@
               <div class="bs-card-img-inner" style="background:linear-gradient(145deg,#C4D5A8,#595F39);">
                 <img src="assets/img/png/Basalt Hot Stone Set.png" alt="">
               </div><span class="bs-card-badge bs-badge-new">New</span>
-              <div class="bs-card-overlay"><button class="bs-card-quick-add">🛒 Quick Add</button><button
-                  class="bs-card-wish">♡</button>
+              <div class="bs-card-overlay">
+                <button class="bs-card-quick-add">🛒 Quick Add</button>
+                <button class="bs-card-wish" title="Add to Wishlist">♡</button>
+                <button class="bs-card-list" title="Add to List">📋</button>
               </div>
             </div>
             <div class="bs-card-body">
@@ -732,8 +394,10 @@
               <div class="bs-card-img-inner" style="background:linear-gradient(145deg,#A8C4D5,#004F69);">
                 <img src="assets/img/png/Archer Luxury Therapy.png" alt="">
               </div>
-              <div class="bs-card-overlay"><button class="bs-card-quick-add">🛒 Quick Add</button><button
-                  class="bs-card-wish">♡</button>
+              <div class="bs-card-overlay">
+                <button class="bs-card-quick-add">🛒 Quick Add</button>
+                <button class="bs-card-wish" title="Add to Wishlist">♡</button>
+                <button class="bs-card-list" title="Add to List">📋</button>
               </div>
             </div>
             <div class="bs-card-body">
@@ -750,8 +414,10 @@
               <div class="bs-card-img-inner" style="background:linear-gradient(145deg,#D5C4A8,#8B6E52);">
                 <img src="assets/img/png/Cedar Sauna Bucket.png" alt="">
               </div><span class="bs-card-badge bs-badge-sale">−10%</span>
-              <div class="bs-card-overlay"><button class="bs-card-quick-add">🛒 Quick Add</button><button
-                  class="bs-card-wish">♡</button>
+              <div class="bs-card-overlay">
+                <button class="bs-card-quick-add">🛒 Quick Add</button>
+                <button class="bs-card-wish" title="Add to Wishlist">♡</button>
+                <button class="bs-card-list" title="Add to List">📋</button>
               </div>
             </div>
             <div class="bs-card-body">
@@ -770,8 +436,10 @@
               <div class="bs-card-img-inner" style="background:linear-gradient(145deg,#A8B4C5,#2C3E50);">
                 <img src="assets/img/png/Monaco Airwave Full-Body.png" alt="">
               </div><span class="bs-card-badge bs-badge-hot">Hot</span>
-              <div class="bs-card-overlay"><button class="bs-card-quick-add">🛒 Quick Add</button><button
-                  class="bs-card-wish">♡</button>
+              <div class="bs-card-overlay">
+                <button class="bs-card-quick-add">🛒 Quick Add</button>
+                <button class="bs-card-wish" title="Add to Wishlist">♡</button>
+                <button class="bs-card-list" title="Add to List">📋</button>
               </div>
             </div>
             <div class="bs-card-body">
@@ -788,8 +456,10 @@
               <div class="bs-card-img-inner" style="background:linear-gradient(145deg,#D5E4C0,#595F39);">
                 <img src="assets/img/png/Biodegradable Gym Wipes.png" alt="">
               </div>
-              <div class="bs-card-overlay"><button class="bs-card-quick-add">🛒 Quick Add</button><button
-                  class="bs-card-wish">♡</button>
+              <div class="bs-card-overlay">
+                <button class="bs-card-quick-add">🛒 Quick Add</button>
+                <button class="bs-card-wish" title="Add to Wishlist">♡</button>
+                <button class="bs-card-list" title="Add to List">📋</button>
               </div>
             </div>
             <div class="bs-card-body">
@@ -806,8 +476,10 @@
               <div class="bs-card-img-inner" style="background:linear-gradient(145deg,#D5B4A8,#D56F53);">
                 <img src="assets/img/png/ErgoComfort.png" alt="">
               </div>
-              <div class="bs-card-overlay"><button class="bs-card-quick-add">🛒 Quick Add</button><button
-                  class="bs-card-wish">♡</button>
+              <div class="bs-card-overlay">
+                <button class="bs-card-quick-add">🛒 Quick Add</button>
+                <button class="bs-card-wish" title="Add to Wishlist">♡</button>
+                <button class="bs-card-list" title="Add to List">📋</button>
               </div>
             </div>
             <div class="bs-card-body">
@@ -824,8 +496,10 @@
               <div class="bs-card-img-inner" style="background:linear-gradient(145deg,#E4D4C0,#E8A020);">
                 <img src="assets/img/png/Candle Set.png" alt="">
               </div><span class="bs-card-badge bs-badge-sale">−20%</span>
-              <div class="bs-card-overlay"><button class="bs-card-quick-add">🛒 Quick Add</button><button
-                  class="bs-card-wish">♡</button>
+              <div class="bs-card-overlay">
+                <button class="bs-card-quick-add">🛒 Quick Add</button>
+                <button class="bs-card-wish" title="Add to Wishlist">♡</button>
+                <button class="bs-card-list" title="Add to List">📋</button>
               </div>
             </div>
             <div class="bs-card-body">
@@ -841,7 +515,7 @@
           </div>
         </div>
         <div style="text-align:center;margin-top:52px;">
-          <a href="#" class="btn btn-teal" style="border-radius:3px;padding:16px 52px;">View All Products →</a>
+          <a href="#" class="btn-outline">View All Bestsellers <span class="btn-arrow">→</span></a>
         </div>
       </div>
     </section>
@@ -890,139 +564,319 @@
     </section>
 
     <!-- ─── SHOP BY COLLECTIONS ─── -->
-    <section class="sec">
+    <section class="sc-sec">
       <div class="w">
-        <div class="sec-head"
-          style="display:flex;justify-content:space-between;align-items:flex-end;text-align:left;margin-bottom:24px;">
-          <div>
-            <div class="sec-eyebrow">Curated For You</div>
-            <h2 class="sec-title">Shop by <em>Collections</em></h2>
+        <div class="sec-head" style="margin-bottom:48px;">
+          <div class="reveal">
+            <div class="sc-eyebrow"
+              style="font-size: 11px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom:12px;">
+              Premium Selection</div>
+
+            <h2 class="sec-title" style="font-size: clamp(32px, 3.5vw, 52px); font-family: var(--serif); margin:0;">Shop
+              by <em>Collections</em></h2>
           </div>
-          <a class="view-all-link">View All Collections →</a>
         </div>
-        <div class="collections-scroll">
-          <div class="coll-card cc1">
-            <div class="coll-emoji">
-              <img src="assets/img/png/Spa Beds.png" class="Shopbycollection" alt="">
+
+        <div class="sc-grid">
+          <!-- Collection 1 -->
+          <div class="sc-card reveal" onclick="goPg('product', null)">
+            <div class="sc-btn-circle">→</div>
+            <div class="sc-img-wrap">
+              <div class="sc-img-glow"></div>
+              <img src="assets/img/png/Spa Beds.png" class="sc-img" alt="Spa Beds">
             </div>
-            <div class="coll-info">
-              <div class="coll-title">Spa Beds</div>
-              <div class="coll-count">48 Products</div>
+            <div class="sc-info">
+              <h3 class="sc-title">Spa Beds</h3>
+              <div class="sc-count">48 Products</div>
             </div>
-            <div class="coll-btn">Shop →</div>
           </div>
-          <div class="coll-card cc2">
-            <div class="coll-emoji">
-              <img src="assets/img/png/Aromatherapy.webp" class="Shopbycollection" alt="">
+
+          <!-- Collection 2 -->
+          <div class="sc-card reveal d1" onclick="goPg('product', null)">
+            <div class="sc-btn-circle">→</div>
+            <div class="sc-img-wrap">
+              <div class="sc-img-glow"></div>
+              <img src="assets/img/png/Aromatherapy.webp" class="sc-img" alt="Aromatherapy">
             </div>
-            <div class="coll-info">
-              <div class="coll-title">Aromatherapy</div>
-              <div class="coll-count">62 Products</div>
+            <div class="sc-info">
+              <h3 class="sc-title">Aromatherapy</h3>
+              <div class="sc-count">62 Products</div>
             </div>
-            <div class="coll-btn">Shop →</div>
           </div>
-          <div class="coll-card cc3">
-            <div class="coll-emoji">
-              <img src="assets/img/png/Salon Equipment.png" class="Shopbycollection" alt="">
+
+          <!-- Collection 3 -->
+          <div class="sc-card reveal d2" onclick="goPg('product', null)">
+            <div class="sc-btn-circle">→</div>
+            <div class="sc-img-wrap">
+              <div class="sc-img-glow"></div>
+              <img src="assets/img/png/Salon Equipment.png" class="sc-img" alt="Salon Equipment">
             </div>
-            <div class="coll-info">
-              <div class="coll-title">Salon Equipment</div>
-              <div class="coll-count">34 Products</div>
+            <div class="sc-info">
+              <h3 class="sc-title">Salon Equipment</h3>
+              <div class="sc-count">34 Products</div>
             </div>
-            <div class="coll-btn">Shop →</div>
           </div>
-          <div class="coll-card cc4">
-            <div class="coll-emoji">
-              <img src="assets/img/png/Hotel Essentialss.png" class="Shopbycollection" alt="">
+
+          <!-- Collection 4 -->
+          <div class="sc-card reveal d3" onclick="goPg('product', null)">
+            <div class="sc-btn-circle">→</div>
+            <div class="sc-img-wrap">
+              <div class="sc-img-glow"></div>
+              <img src="assets/img/png/Hotel Essentialss.png" class="sc-img" alt="Hotel Essentials">
             </div>
-            <div class="coll-info">
-              <div class="coll-title">Hotel Essentials</div>
-              <div class="coll-count">89 Products</div>
+            <div class="sc-info">
+              <h3 class="sc-title">Hotel Essentials</h3>
+              <div class="sc-count">89 Products</div>
             </div>
-            <div class="coll-btn">Shop →</div>
           </div>
         </div>
       </div>
     </section>
+
 
     <!-- ─── NEW ARRIVALS ─── -->
-    <section class="sec sec-gray">
+    <section class="na-sec na-sec-gray">
       <div class="w">
-        <div class="sec-head"
+        <div class="na-head"
           style="display:flex;justify-content:space-between;align-items:flex-end;text-align:left;margin-bottom:24px;">
           <div>
-            <div class="sec-eyebrow gold">Just Landed</div>
-            <h2 class="sec-title">New <em>Arrivals</em></h2>
+            <div class="na-eyebrow gold">Just Landed</div>
+            <h2 class="na-title">New <em>Arrivals</em></h2>
           </div>
-          <a class="view-all-link">View All →</a>
+          <a class="na-view-all">View All →</a>
         </div>
-        <div class="pgrid">
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-new">New</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#eef4f2;"><span class="pc-emoji">🛏️</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
-            </div>
-            <div class="pc-body">
-              <div class="pc-cat">Spa Beds</div>
-              <div class="pc-name">Monaco Airwave Full-Body Stretching Table</div>
-              <div class="pc-meta">AWS S30 · Air-Adjustable Cushions</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>4,500</div><button class="pc-add">+</button>
-              </div>
-            </div>
-          </div>
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-new">New</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#f0f7ee;"><span class="pc-emoji">🌿</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
-            </div>
-            <div class="pc-body">
-              <div class="pc-cat">Massage Oils</div>
-              <div class="pc-name">Luxury Aromatherapy Blend — Lavender & Eucalyptus</div>
-              <div class="pc-meta">500ml · Therapeutic Grade</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>210</div><button class="pc-add">+</button>
-              </div>
-            </div>
-          </div>
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-new">New</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#f4f0ec;"><span class="pc-emoji">🪣</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
-            </div>
-            <div class="pc-body">
-              <div class="pc-cat">Sauna</div>
-              <div class="pc-name">Finnish Sauna Bucket Set — Red Cedar Wood</div>
-              <div class="pc-meta">6L Bucket + Ladle Included</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>195</div><button class="pc-add">+</button>
-              </div>
-            </div>
-          </div>
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-new">New</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#eef4f2;"><span class="pc-emoji">
-                <img src="assets/img/png/ErgoComfort.png" alt="">
+        <div class="na-grid">
+          <div class="na-card" onclick="goPg('product',null)">
+            <div class="na-badge b-new">New</div>
+            <button class="na-card-wish" title="Add to Wishlist">♡</button>
+            <button class="na-card-list" title="Add to List">📋</button>
+            <div class="na-card-img" style="background:#eef4f2;"><span class="na-card-emoji">
+                <img src="assets/img/png/Monaco Airwave Full-Bodys.png" alt="">
               </span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+              <div class="na-card-img-bg"></div>
+              <div class="na-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Accessories</div>
-              <div class="pc-name">ErgoComfort 360° Massage Stool with Backrest</div>
-              <div class="pc-meta">Hydraulic Adjustment · Castors</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>290</div><button class="pc-add">+</button>
+            <div class="na-card-body">
+              <div class="na-card-cat">Spa Beds</div>
+              <div class="na-card-name">Monaco Airwave Full-Body Stretching Table</div>
+              <div class="na-card-meta">AWS S30 · Air-Adjustable Cushions</div>
+              <div class="na-card-footer">
+                <div class="na-card-price"><span class="cur">AED </span>4,500</div><button
+                  class="na-card-add">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="na-card" onclick="goPg('product',null)">
+            <div class="na-badge b-new">New</div>
+            <button class="na-card-wish" title="Add to Wishlist">♡</button>
+            <button class="na-card-list" title="Add to List">📋</button>
+            <div class="na-card-img" style="background:#f0f7ee;"><span class="na-card-emoji">
+                <img src="assets/img/png/Luxury Aromatherapy Blend.png" alt="">
+              </span>
+              <div class="na-card-img-bg"></div>
+              <div class="na-card-overlay">+ Quick Add</div>
+            </div>
+            <div class="na-card-body">
+              <div class="na-card-cat">Massage Oils</div>
+              <div class="na-card-name">Luxury Aromatherapy Blend — Lavender & Eucalyptus</div>
+              <div class="na-card-meta">500ml · Therapeutic Grade</div>
+              <div class="na-card-footer">
+                <div class="na-card-price"><span class="cur">AED </span>210</div><button class="na-card-add">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="na-card" onclick="goPg('product',null)">
+            <div class="na-badge b-new">New</div>
+            <button class="na-card-wish" title="Add to Wishlist">♡</button>
+            <button class="na-card-list" title="Add to List">📋</button>
+            <div class="na-card-img" style="background:#f4f0ec;"><span class="na-card-emoji">
+                <img src="assets/img/png/Finnish Sauna Bucket Set.png" alt="">
+              </span>
+              <div class="na-card-img-bg"></div>
+              <div class="na-card-overlay">+ Quick Add</div>
+            </div>
+            <div class="na-card-body">
+              <div class="na-card-cat">Sauna</div>
+              <div class="na-card-name">Finnish Sauna Bucket Set — Red Cedar Wood</div>
+              <div class="na-card-meta">6L Bucket + Ladle Included</div>
+              <div class="na-card-footer">
+                <div class="na-card-price"><span class="cur">AED </span>195</div><button class="na-card-add">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="na-card" onclick="goPg('product',null)">
+            <div class="na-badge b-new">New</div>
+            <button class="na-card-wish" title="Add to Wishlist">♡</button>
+            <button class="na-card-list" title="Add to List">📋</button>
+            <div class="na-card-img" style="background:#eef4f2;"><span class="na-card-emoji">
+                <img src="assets/img/png/ErgoComfort 360 Massage.png" alt="">
+              </span>
+              <div class="na-card-img-bg">
+
+              </div>
+              <div class="na-card-overlay">+ Quick Add</div>
+            </div>
+            <div class="na-card-body">
+              <div class="na-card-cat">Accessories</div>
+              <div class="na-card-name">ErgoComfort 360° Massage Stool with Backrest</div>
+              <div class="na-card-meta">Hydraulic Adjustment · Castors</div>
+              <div class="na-card-footer">
+                <div class="na-card-price"><span class="cur">AED </span>290</div><button class="na-card-add">+</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    <!-- ─── NEW ARRIVALS 2 model open ─── -->
+    <section class="sec sec-warm">
+      <div class="w">
+        <div class="na2-sh reveal">
+          <div class="na2-sh-row">
+            <div>
+              <div class="na2-eyebrow">
+                <div class="na2-eyebrow-bar"></div><span class="na2-eyebrow-label">Just Landed</span>
+              </div>
+              <h2 class="na2-sh-title">New <em>Arrivals</em></h2>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div class="na2-arr-btns"><button class="na2-arr-btn" id="na2-aleft">←</button><button class="na2-arr-btn"
+                  id="na2-aright">→</button></div>
+              <a href="#" class="btn btn-outline" style="border-radius:3px;">See All →</a>
+            </div>
+          </div>
+        </div>
+        <div class="na2-arrivals-track" id="na2-atrack">
+          <div class="na2-card">
+            <div class="na2-card-img">
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#A8B4C5,#2C3E50);">
+                <img src="assets/img/png/Premium Electric Spa Table.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
+            </div>
+            <div class="na2-card-body">
+              <div class="na2-card-cat">Spa Equipment</div>
+              <h3 class="na2-card-name">Premium Electric Spa Table – Wood Cabinet</h3>
+              <div class="na2-card-foot">
+                <div class="na2-card-price">AED 9,800</div>
+              </div>
+            </div>
+          </div>
+          <div class="na2-card">
+            <div class="na2-card-img">
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#C4D5A8,#595F39);">
+                <img src="assets/img/png/Ayurvedic Herbal Compress Bags.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
+            </div>
+            <div class="na2-card-body">
+              <div class="na2-card-cat">Disposables</div>
+              <h3 class="na2-card-name">Ayurvedic Herbal Compress Bags – Set of 20</h3>
+              <div class="na2-card-foot">
+                <div class="na2-card-price">AED 145</div>
+              </div>
+            </div>
+          </div>
+          <div class="na2-card">
+            <div class="na2-card-img">
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#D5C4B4,#B89B82);">
+                <img src="assets/img/png/Mineral Salt Body Scrub.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
+            </div>
+            <div class="na2-card-body">
+              <div class="na2-card-cat">Body Care</div>
+              <h3 class="na2-card-name">Mineral Salt Body Scrub – 1kg Pro Jar</h3>
+              <div class="na2-card-foot">
+                <div class="na2-card-price">AED 210</div>
+              </div>
+            </div>
+          </div>
+          <div class="na2-card">
+            <div class="na2-card-img">
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#D5C4A8,#8B6E52);">
+                <img src="assets/img/png/Cedar Sauna Bench Seat.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
+            </div>
+            <div class="na2-card-body">
+              <div class="na2-card-cat">Sauna</div>
+              <h3 class="na2-card-name">Cedar Sauna Bench Seat – 200cm</h3>
+              <div class="na2-card-foot">
+                <div class="na2-card-price">AED 1,450</div>
+              </div>
+            </div>
+          </div>
+          <div class="na2-card">
+            <div class="na2-card-img">
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#A8D5E4,#004F69);">
+                <img src="assets/img/png/Ultrasonic Aroma Diffuser 500ml.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
+            </div>
+            <div class="na2-card-body">
+              <div class="na2-card-cat">Aromatherapy</div>
+              <h3 class="na2-card-name">Ultrasonic Aroma Diffuser 500ml – Mist & LED</h3>
+              <div class="na2-card-foot">
+                <div class="na2-card-price">AED 320</div>
+              </div>
+            </div>
+          </div>
+          <div class="na2-card">
+            <div class="na2-card-img">
+              <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#E4D0B4,#E8A020);">
+                <img src="assets/img/png/Copper Oil Burner.png" alt="">
+              </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
+            </div>
+            <div class="na2-card-body">
+              <div class="na2-card-cat">Hotel Décor</div>
+              <h3 class="na2-card-name">Copper Oil Burner – Handcrafted Wellness</h3>
+              <div class="na2-card-foot">
+                <div class="na2-card-price">AED 185</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ─── NEW ARRIVALS 2 model end ─── -->
     <!-- ─── GIFT COMBOS / FEATURED ─── -->
     <section class="sec">
       <div class="w">
@@ -1033,7 +887,9 @@
         </div>
         <div class="gift-grid">
           <div class="gift-card gc1">
-            <div class="gift-emoji">🌿</div>
+            <div class="gift-emoji">
+              <img src="assets/img/png/Spa Starter Kit.png" alt="">
+            </div>
             <div class="gift-body">
               <div class="gift-tag">Aromatherapy Bundle</div>
               <div class="gift-title">Spa Starter Kit</div>
@@ -1041,7 +897,9 @@
             </div>
           </div>
           <div class="gift-card gc2" style="min-height:260px;">
-            <div class="gift-emoji" style="font-size:80px;">🛏️</div>
+            <div class="gift-emoji" style="font-size:80px;">
+              <img src="assets/img/png/Complete Therapist Bundle.png" alt="">
+            </div>
             <div class="gift-body">
               <div class="gift-tag">Professional Setup</div>
               <div class="gift-title">Complete Therapist Bundle — Bed + Oils + Accessories</div>
@@ -1049,7 +907,9 @@
             </div>
           </div>
           <div class="gift-card gc3">
-            <div class="gift-emoji">🪣</div>
+            <div class="gift-emoji">
+              <img src="assets/img/png/Finnish Sauna Complete Set.png" alt="">
+            </div>
             <div class="gift-body">
               <div class="gift-tag">Sauna Collection</div>
               <div class="gift-title">Finnish Sauna Complete Set</div>
@@ -1060,104 +920,115 @@
       </div>
     </section>
 
-    <!-- ─── BEST SELLERS ─── -->
-    <section class="sec sec-gray">
+    <!-- ─── BEST SELLERS (bss-*) ─── -->
+    <section class="bss-sec">
       <div class="w">
-        <div class="sec-head">
-          <div class="sec-eyebrow">Loved Worldwide</div>
-          <h2 class="sec-title">Best<em>sellers</em></h2>
-          <div class="sec-sub">Trusted by spa professionals across the GCC, for a reason.</div>
-          <div class="sec-rule"></div>
+        <div class="bss-head">
+          <div class="bss-eyebrow">Loved Worldwide</div>
+          <h2 class="bss-title">Best<em>sellers</em></h2>
+          <div class="bss-sub">Trusted by spa professionals across the GCC, for a reason.</div>
+          <div class="bss-rule"></div>
         </div>
-        <div
-          style="display:flex;justify-content:center;margin-bottom:28px;gap:0;border:2px solid var(--teal-pale);border-radius:50px;overflow:hidden;width:fit-content;margin-left:auto;margin-right:auto;">
-          <button class="flt on"
-            style="padding:10px 22px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;background:var(--teal);color:white;cursor:pointer;"
-            onclick="setFlt(this)">All</button>
-          <button class="flt"
-            style="padding:10px 22px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;background:transparent;color:var(--teal);cursor:pointer;"
-            onclick="setFlt(this)">Spa Beds</button>
-          <button class="flt"
-            style="padding:10px 22px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;background:transparent;color:var(--teal);cursor:pointer;"
-            onclick="setFlt(this)">Massage Oils</button>
-          <button class="flt"
-            style="padding:10px 22px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;background:transparent;color:var(--teal);cursor:pointer;"
-            onclick="setFlt(this)">Salon</button>
-          <button class="flt"
-            style="padding:10px 22px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;background:transparent;color:var(--teal);cursor:pointer;"
-            onclick="setFlt(this)">Hotel</button>
+        <div class="bss-filter-wrap">
+          <button class="bss-filter bss-active" onclick="setFlt(this)">All</button>
+          <button class="bss-filter" onclick="setFlt(this)">Spa Beds</button>
+          <button class="bss-filter" onclick="setFlt(this)">Massage Oils</button>
+          <button class="bss-filter" onclick="setFlt(this)">Salon</button>
+          <button class="bss-filter" onclick="setFlt(this)">Hotel</button>
         </div>
-        <div class="pgrid">
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-best">Best</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#eef4f2;"><span class="pc-emoji">🛏️</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+        <div class="bss-grid">
+          <div class="bss-card" onclick="goPg('product',null)">
+            <div class="bss-badge bss-b-best">Best</div>
+            <button class="bss-card-wish">♡</button>
+            <button class="bss-card-list">📋</button>
+            <div class="bss-card-img" style="background:#efe9db;"><span class="bss-emoji">
+                <img src="assets/img/png/AGO S28 Portable Massage Table.png" alt="">
+              </span>
+              <div class="bss-card-img-bg"></div>
+              <div class="bss-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Spa Beds</div>
-              <div class="pc-name">AGO S28 Portable Massage Table</div>
-              <div class="pc-meta">Oil Resistant PU · 31 lbs · Beige</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>1,800</div><button class="pc-add">+</button>
+            <div class="bss-card-body">
+              <div class="bss-card-cat">Spa Beds</div>
+              <div class="bss-card-name">AGO S28 Portable Massage Table</div>
+              <div class="bss-card-meta">Oil Resistant PU · 31 lbs · Beige</div>
+              <div class="bss-card-footer">
+                <div class="bss-card-price"><span class="cur">AED </span>1,800</div><button
+                  class="bss-card-add">+</button>
               </div>
             </div>
           </div>
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-sale">-32%</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#f8f0e8;"><span class="pc-emoji">🪨</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+          <div class="bss-card" onclick="goPg('product',null)">
+            <div class="bss-badge bss-b-sale">-32%</div>
+            <button class="bss-card-wish">♡</button>
+            <button class="bss-card-list">📋</button>
+            <div class="bss-card-img" style="background:#f8f0e8;"><span class="bss-emoji">
+                <img src="assets/img/png/Massage Stone Set.png" alt="">
+              </span>
+              <div class="bss-card-img-bg"></div>
+              <div class="bss-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Accessories</div>
-              <div class="pc-name">Massage Stone Set — 22 Pcs Basalt</div>
-              <div class="pc-meta">Professional Hot Stone Therapy</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>325<span class="pc-old">AED 480</span></div><button
-                  class="pc-add">+</button>
+            <div class="bss-card-body">
+              <div class="bss-card-cat">Accessories</div>
+              <div class="bss-card-name">Massage Stone Set — 22 Pcs Basalt</div>
+              <div class="bss-card-meta">Professional Hot Stone Therapy</div>
+              <div class="bss-card-footer">
+                <div class="bss-card-price"><span class="cur">AED </span>325<span class="bss-card-old">AED 480</span>
+                </div>
+                <button class="bss-card-add">+</button>
               </div>
             </div>
           </div>
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-best">Best</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#f0f7ee;"><span class="pc-emoji">🌿</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+          <div class="bss-card" onclick="goPg('product',null)">
+            <div class="bss-badge bss-b-best">Best</div>
+            <button class="bss-card-wish">♡</button>
+            <button class="bss-card-list">📋</button>
+            <div class="bss-card-img" style="background:#f0f7ee;"><span class="bss-emoji">
+                <img src="assets/img/png/Aromatherapy Massage Oil.png" alt="">
+              </span>
+              <div class="bss-card-img-bg"></div>
+              <div class="bss-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Massage Oils</div>
-              <div class="pc-name">Aromatherapy Massage Oil — Signature Blend</div>
-              <div class="pc-meta">Lavender & Eucalyptus · 500ml</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>210</div><button class="pc-add">+</button>
+            <div class="bss-card-body">
+              <div class="bss-card-cat">Massage Oils</div>
+              <div class="bss-card-name">Aromatherapy Massage Oil — Signature Blend</div>
+              <div class="bss-card-meta">Lavender & Eucalyptus · 500ml</div>
+              <div class="bss-card-footer">
+                <div class="bss-card-price"><span class="cur">AED </span>210</div><button
+                  class="bss-card-add">+</button>
               </div>
             </div>
           </div>
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-hot">Hot</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#eef4f2;"><span class="pc-emoji">🌊</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+          <div class="bss-card" onclick="goPg('product',null)">
+            <div class="bss-badge bss-b-hot">Hot</div>
+            <button class="bss-card-wish">♡</button>
+            <button class="bss-card-list">📋</button>
+            <div class="bss-card-img" style="background:#efe9db;"><span class="bss-emoji">
+                <img src="assets/img/png/Archer Luxury Therapy.png" alt="">
+              </span>
+              <div class="bss-card-img-bg"></div>
+              <div class="bss-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Spa Beds</div>
-              <div class="pc-name">Archer Luxury Hydraulic Therapy Spa Bed</div>
-              <div class="pc-meta">Electric Adjustment · Face Hole</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>2,820</div><button class="pc-add">+</button>
+            <div class="bss-card-body">
+              <div class="bss-card-cat">Spa Beds</div>
+              <div class="bss-card-name">Archer Luxury Hydraulic Therapy Spa Bed</div>
+              <div class="bss-card-meta">Electric Adjustment · Face Hole</div>
+              <div class="bss-card-footer">
+                <div class="bss-card-price"><span class="cur">AED </span>2,820</div><button
+                  class="bss-card-add">+</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-center mt32"><button class="btn-outline-teal">View All Bestsellers →</button></div>
+        <div class="text-center mt32"><button class="btn-outline">View All Bestsellers →</button></div>
       </div>
     </section>
 
     <!-- ─── EDITORIAL FULL-WIDTH BANNER ─── -->
     <section class="sec">
       <div class="editorial">
-        <div class="editorial-visual"><span class="editorial-visual-em">🛏️</span></div>
+        <div class="editorial-visual"><span class="editorial-visual-em">
+            <img src="assets/img/png/Premium Wellness.png" alt="">
+          </span></div>
         <div class="editorial-text">
           <div class="label">Trusted by Professionals</div>
           <h2>Premium Wellness <br><em>Equipment for the GCC</em></h2>
@@ -1218,9 +1089,17 @@
         <div class="lo-grid">
           <!-- Card 1 -->
           <div class="lo-card reveal">
-            <div class="lo-badge">−30% OFF</div>
             <div class="lo-card-img">
-              <div class="lo-card-img-bg"></div>🚿
+              <div class="lo-badge">−30% OFF</div>
+              <div class="lo-card-img-bg"></div>
+              <img src="assets/img/png/Premium Turkish Waffle.png" alt="">
+              <div class="lo-card-overlay">
+                <div class="lo-overlay-row">
+                  <button class="lo-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="lo-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="lo-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="lo-card-body">
               <div class="lo-card-cat">Hotel Products</div>
@@ -1236,16 +1115,23 @@
                   <span class="lo-price-old">AED 220</span>
                   <span class="lo-price-new">AED 160</span>
                 </div>
-                <button class="lo-add-btn">+</button>
               </div>
             </div>
           </div>
 
           <!-- Card 2 -->
           <div class="lo-card reveal d1">
-            <div class="lo-badge">−25% OFF</div>
             <div class="lo-card-img">
-              <div class="lo-card-img-bg"></div>🪨
+              <div class="lo-badge">−25% OFF</div>
+              <div class="lo-card-img-bg"></div>
+              <img src="assets/img/png/Basalt Hot Stone Therapy.png" alt="">
+              <div class="lo-card-overlay">
+                <div class="lo-overlay-row">
+                  <button class="lo-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="lo-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="lo-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="lo-card-body">
               <div class="lo-card-cat">Accessories</div>
@@ -1261,16 +1147,23 @@
                   <span class="lo-price-old">AED 480</span>
                   <span class="lo-price-new">AED 325</span>
                 </div>
-                <button class="lo-add-btn">+</button>
               </div>
             </div>
           </div>
 
           <!-- Card 3 -->
           <div class="lo-card reveal d2">
-            <div class="lo-badge">−20% OFF</div>
             <div class="lo-card-img">
-              <div class="lo-card-img-bg"></div>💆
+              <div class="lo-badge">−20% OFF</div>
+              <div class="lo-card-img-bg"></div>
+              <img src="assets/img/png/ErgoComfort 360.png" alt="">
+              <div class="lo-card-overlay">
+                <div class="lo-overlay-row">
+                  <button class="lo-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="lo-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="lo-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="lo-card-body">
               <div class="lo-card-cat">Furniture</div>
@@ -1286,16 +1179,23 @@
                   <span class="lo-price-old">AED 290</span>
                   <span class="lo-price-new">AED 232</span>
                 </div>
-                <button class="lo-add-btn">+</button>
               </div>
             </div>
           </div>
 
           <!-- Card 4 -->
           <div class="lo-card reveal d3">
-            <div class="lo-badge">−15% OFF</div>
             <div class="lo-card-img">
-              <div class="lo-card-img-bg"></div>🪣
+              <div class="lo-badge">−15% OFF</div>
+              <div class="lo-card-img-bg"></div>
+              <img src="assets/img/png/Professional Red Cedar.png" alt="">
+              <div class="lo-card-overlay">
+                <div class="lo-overlay-row">
+                  <button class="lo-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="lo-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="lo-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="lo-card-body">
               <div class="lo-card-cat">Sauna</div>
@@ -1311,7 +1211,6 @@
                   <span class="lo-price-old">AED 195</span>
                   <span class="lo-price-new">AED 166</span>
                 </div>
-                <button class="lo-add-btn">+</button>
               </div>
             </div>
           </div>
@@ -1320,79 +1219,96 @@
     </section>
 
     <!-- ─── FEATURED COLLECTION ─── -->
-    <section class="sec sec-gold-pale">
+    <section class="fc-sec fc-sec-gold-pale">
       <div class="w">
-        <div class="sec-head">
-          <div class="sec-eyebrow gold">Editor's Pick</div>
-          <h2 class="sec-title">Featured <em>Collection</em></h2>
-          <div class="sec-rule"></div>
+        <div class="fc-head">
+          <div class="fc-eyebrow fc-eyebrow-gold">Editor's Pick</div>
+          <h2 class="fc-title">Featured <em>Collection</em></h2>
+          <div class="fc-rule"></div>
         </div>
-        <div class="pgrid pgrid-5" style="grid-template-columns:repeat(5,1fr);">
-          <div class="pc" onclick="goPg('product',null)"><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#eef4f2;height:180px;font-size:60px;"><span
-                class="pc-emoji">🛏️</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+        <div class="fc-grid fc-grid-5" style="grid-template-columns:repeat(5,1fr);">
+          <div class="fc-card" onclick="goPg('product',null)">
+            <button class="fc-card-wish" title="Add to Wishlist">♡</button>
+            <button class="fc-card-list" title="Add to List">📋</button>
+            <div class="fc-card-img" style="background:#eef4f2;height:180px;font-size:60px;"><span
+                class="fc-card-emoji">
+                <img src="assets/img/png/Archer Luxury Spa Bed.png" alt="">
+              </span>
+              <div class="fc-card-img-bg"></div>
+              <div class="fc-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Spa Beds</div>
-              <div class="pc-name">Archer Luxury Spa Bed</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>2,820</div><button class="pc-add">+</button>
+            <div class="fc-card-body">
+              <div class="fc-card-cat">Spa Beds</div>
+              <div class="fc-card-name">Archer Luxury Spa Bed</div>
+              <div class="fc-card-footer">
+                <div class="fc-card-price"><span class="cur">AED </span>2,820</div><button
+                  class="fc-card-add">+</button>
               </div>
             </div>
           </div>
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-best">Best</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#f0f7ee;height:180px;font-size:60px;"><span class="pc-emoji">🌿</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+          <div class="fc-card" onclick="goPg('product',null)">
+            <div class="fc-card-badge fc-badge-best">Best</div><button class="fc-card-wish">♡</button>
+            <div class="fc-card-img" style="background:#f0f7ee;height:180px;font-size:60px;"><span
+                class="fc-card-emoji">
+                <img src="assets/img/png/Aromatherapy Blend.png" alt="">
+              </span>
+              <div class="fc-card-img-bg"></div>
+              <div class="fc-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Oils</div>
-              <div class="pc-name">Aromatherapy Blend</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>210</div><button class="pc-add">+</button>
+            <div class="fc-card-body">
+              <div class="fc-card-cat">Oils</div>
+              <div class="fc-card-name">Aromatherapy Blend</div>
+              <div class="fc-card-footer">
+                <div class="fc-card-price"><span class="cur">AED </span>210</div><button class="fc-card-add">+</button>
               </div>
             </div>
           </div>
-          <div class="pc" onclick="goPg('product',null)"><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#eef4f2;height:180px;font-size:60px;"><span class="pc-emoji">🫧</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+          <div class="fc-card" onclick="goPg('product',null)"><button class="fc-card-wish">♡</button>
+            <div class="fc-card-img" style="background:#eef4f2;height:180px;font-size:60px;">
+              <span class="fc-card-emoji">
+                <img src="assets/img/png/Facial Steamer Pro.png" alt="">
+              </span>
+              <div class="fc-card-img-bg"></div>
+              <div class="fc-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Salon</div>
-              <div class="pc-name">Facial Steamer Pro</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>580</div><button class="pc-add">+</button>
+            <div class="fc-card-body">
+              <div class="fc-card-cat">Salon</div>
+              <div class="fc-card-name">Facial Steamer Pro</div>
+              <div class="fc-card-footer">
+                <div class="fc-card-price"><span class="cur">AED </span>580</div><button class="fc-card-add">+</button>
               </div>
             </div>
           </div>
-          <div class="pc" onclick="goPg('product',null)"><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#f4f0ec;height:180px;font-size:60px;"><span class="pc-emoji">🪣</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+          <div class="fc-card" onclick="goPg('product',null)"><button class="fc-card-wish">♡</button>
+            <div class="fc-card-img" style="background:#f4f0ec;height:180px;font-size:60px;">
+              <span class="fc-card-emoji">
+                <img src="assets/img/png/Cedar Sauna Buckets.png" alt="">
+              </span>
+              <div class="fc-card-img-bg"></div>
+              <div class="fc-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Sauna</div>
-              <div class="pc-name">Cedar Sauna Bucket</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>195</div><button class="pc-add">+</button>
+            <div class="fc-card-body">
+              <div class="fc-card-cat">Sauna</div>
+              <div class="fc-card-name">Cedar Sauna Bucket</div>
+              <div class="fc-card-footer">
+                <div class="fc-card-price"><span class="cur">AED </span>195</div><button class="fc-card-add">+</button>
               </div>
             </div>
           </div>
-          <div class="pc" onclick="goPg('product',null)">
-            <div class="pc-badge b-sale">-20%</div><button class="pc-wish">♡</button>
-            <div class="pc-img" style="background:#eef4f2;height:180px;font-size:60px;"><span class="pc-emoji">💆</span>
-              <div class="pc-img-bg"></div>
-              <div class="pc-overlay">+ Quick Add</div>
+          <div class="fc-card" onclick="goPg('product',null)">
+            <div class="fc-card-badge fc-badge-sale">-20%</div><button class="fc-card-wish">♡</button>
+            <div class="fc-card-img" style="background:#eef4f2;height:180px;font-size:60px;">
+              <span class="fc-card-emoji">
+                <img src="assets/img/png/Massage Stool 360.png" alt="">
+              </span>
+              <div class="fc-card-img-bg"></div>
+              <div class="fc-card-overlay">+ Quick Add</div>
             </div>
-            <div class="pc-body">
-              <div class="pc-cat">Accessories</div>
-              <div class="pc-name">Massage Stool 360°</div>
-              <div class="pc-footer">
-                <div class="pc-price"><span class="cur">AED </span>232</div><button class="pc-add">+</button>
+            <div class="fc-card-body">
+              <div class="fc-card-cat">Accessories</div>
+              <div class="fc-card-name">Massage Stool 360°</div>
+              <div class="fc-card-footer">
+                <div class="fc-card-price"><span class="cur">AED </span>232</div><button class="fc-card-add">+</button>
               </div>
             </div>
           </div>
@@ -1425,38 +1341,218 @@
     </section>
 
     <!-- ─── CONNECT / INSTAGRAM ─── -->
-    <section class="sec">
+    <section class="sec sec-instagram">
       <div class="w">
         <div class="sec-head">
           <div class="sec-eyebrow">Follow @spastore.me</div>
           <h2 class="sec-title">Connect With Us <em>on Instagram</em></h2>
           <div class="sec-sub">Tag us in your spa setup for a chance to be featured</div>
-          <div class="sec-rule"></div>
-        </div>
-        <div class="insta-grid">
-          <div class="ig-tile ig1"><span>🛏️</span>
-            <div class="ig-overlay"><span class="ig-icon">📸</span></div>
-          </div>
-          <div class="ig-tile ig2"><span>🌿</span>
-            <div class="ig-overlay"><span class="ig-icon">📸</span></div>
-          </div>
-          <div class="ig-tile ig3"><span>🪣</span>
-            <div class="ig-overlay"><span class="ig-icon">📸</span></div>
-          </div>
-          <div class="ig-tile ig4"><span>💆</span>
-            <div class="ig-overlay"><span class="ig-icon">📸</span></div>
-          </div>
-          <div class="ig-tile ig5"><span>🛁</span>
-            <div class="ig-overlay"><span class="ig-icon">📸</span></div>
-          </div>
-          <div class="ig-tile ig6"><span>🫧</span>
-            <div class="ig-overlay"><span class="ig-icon">📸</span></div>
-          </div>
         </div>
       </div>
-    </section>
 
-    <!-- ─── TESTIMONIALS ─── -->
+      <div class="instagram-marquee">
+        <div class="marquee-content">
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2025/07/27/293785_tiny.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Elevate your professional spa experience with our premium beds.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DCrMSHXyGMS/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2026/03/23/341790_tiny.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Pure serenity and comfort for your valued clients.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DS7wvGQk6TU/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://assets.mixkit.co/videos/41741/41741-720.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Modern wellness solutions for world-class professional spas.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2025/11/03/313746_tiny.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Experience the touch of luxury in every single detail.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DCrMSHXyGMS/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2025/11/20/317227_tiny.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Unmatched quality for salon and spa professionals across GCC.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DS7wvGQk6TU/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2024/12/10/246082_tiny.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Transforming professional spaces into sanctuaries of peace.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2023/05/30/165063-831695774_tiny.mp4" autoplay muted loop
+                playsinline preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">The ultimate in ergonomics and client therapeutic comfort.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2022/09/17/131685-751004794_tiny.mp4" autoplay muted loop
+                playsinline preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Trusted by leading wellness centers and hotels globally.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2024/10/06/234918_tiny.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Your partner in premium spa equipment and supplies.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2023/07/28/173530-849610807_tiny.mp4" autoplay muted loop
+                playsinline preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Discover the art of relaxation with spastore.me equipment.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate items for seamless loop -->
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2024/03/14/204214-923594173_large.mp4" autoplay muted loop
+                playsinline preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Sophisticated design meets therapeutic excellence here.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2026/03/22/341659_large.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Crafting the perfect environment for healing and beauty.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-card">
+              <video src="https://cdn.pixabay.com/video/2024/08/30/228847_tiny.mp4" autoplay muted loop playsinline
+                preload="auto"></video>
+              <div class="ig-header">
+                <img src="assets/img/spa-beds.webp" class="ig-profile-pic">
+                <span class="ig-handle">spastore.me</span>
+              </div>
+              <div class="ig-caption">Where aesthetics and functionality coexist beautifully.</div>
+              <div class="video-overlay">
+                <a href="https://www.instagram.com/reel/DKjaG8svoRW/" target="_blank" class="ig-btn">View Reel</a>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- marquee-content -->
+      </div> <!-- instagram-marquee -->
+    </section>
+    <!-- INSTAGRAM video auto play end  -->
     <section class="sec sec-gray">
       <div class="w">
         <div class="sec-head">
@@ -1624,7 +1720,9 @@
 
       <!-- Main Image -->
       <div>
-        <div class="pdp-main-img">🛏️<div class="pdp-badge">Best Seller</div>
+        <div class="pdp-main-img">
+          <img src="assets/img/png/Archer Luxury Spa Bed.png" alt="">
+          <div class="pdp-badge">Best Seller</div>
         </div>
         <div style="display:flex;gap:8px;margin-top:10px;">
           <div
@@ -1748,7 +1846,8 @@
           <div class="sec-rule"></div>
         </div>
         <div class="pgrid">
-          <div class="pc"><button class="pc-wish">♡</button>
+          <div class="pc"><button class="pc-wish" title="Add to Wishlist">♡</button><button class="pc-list"
+              title="Add to List">📋</button>
             <div class="pc-img" style="background:#f8f0e8;"><span class="pc-emoji">🪨</span>
               <div class="pc-img-bg"></div>
               <div class="pc-overlay">+ Quick Add</div>
@@ -1762,7 +1861,8 @@
             </div>
           </div>
           <div class="pc">
-            <div class="pc-badge b-new">New</div><button class="pc-wish">♡</button>
+            <div class="pc-badge b-new">New</div><button class="pc-wish" title="Add to Wishlist">♡</button><button
+              class="pc-list" title="Add to List">📋</button>
             <div class="pc-img" style="background:#f0f7ee;"><span class="pc-emoji">🌿</span>
               <div class="pc-img-bg"></div>
               <div class="pc-overlay">+ Quick Add</div>
@@ -2014,6 +2114,10 @@
     document.getElementById('aleft')?.addEventListener('click', () => document.getElementById('atrack').scrollBy({ left: -280, behavior: 'smooth' }));
     document.getElementById('aright')?.addEventListener('click', () => document.getElementById('atrack').scrollBy({ left: 280, behavior: 'smooth' }));
 
+    // Arrivals 2 scroll
+    document.getElementById('na2-aleft')?.addEventListener('click', () => document.getElementById('na2-atrack').scrollBy({ left: -320, behavior: 'smooth' }));
+    document.getElementById('na2-aright')?.addEventListener('click', () => document.getElementById('na2-atrack').scrollBy({ left: 320, behavior: 'smooth' }));
+
     // Quantity
     function chQty(d) { const el = document.getElementById('qtyV'); if (!el) return; let v = parseInt(el.textContent) + d; el.textContent = Math.max(1, Math.min(99, v)); }
 
@@ -2081,6 +2185,7 @@
       document.querySelectorAll('.rev-page-btn').forEach(x => x.classList.remove('on')); this.classList.add('on');
     }));
   </script>
+
 </body>
 
 </html>

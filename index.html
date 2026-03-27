@@ -6,554 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPA STORE — Premium Spa & Wellness Supplies | UAE · GCC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style01.css">
   <link rel="stylesheet" href="assets/css/style02.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    /* ─── LIMITED OFFERS SECTION (REDESIGN) ─── */
-    .lo-sec {
-      background: linear-gradient(135deg, #1f2d1c 0%, #2d7d72 100%);
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .lo-sec::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(195, 147, 63, 0.15) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .lo-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 56px;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-
-    .lo-title-wrap {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .lo-eyebrow {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: #c3933f;
-      margin-bottom: 14px;
-      display: block;
-    }
-
-    .lo-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 4.5vw, 56px);
-      font-weight: 700;
-      color: #efe9db;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-    }
-
-    .lo-title em {
-      font-style: italic;
-      color: #6b9d78;
-      opacity: 0.95;
-    }
-
-    .lo-timer-wrap {
-      background: rgba(239, 233, 219, 0.05);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(239, 233, 219, 0.15);
-      border-radius: 24px;
-      padding: 24px 40px;
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
-    .lo-timer-label {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: rgba(239, 233, 219, 0.6);
-      letter-spacing: 0.15em;
-    }
-
-    .lo-timer {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-
-    .lo-t-unit {
-      text-align: center;
-      min-width: 48px;
-    }
-
-    .lo-t-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: #c3933f;
-      line-height: 1;
-    }
-
-    .lo-t-lab {
-      font-size: 9.5px;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: rgba(239, 233, 219, 0.5);
-      margin-top: 6px;
-    }
-
-    .lo-t-sep {
-      font-size: 28px;
-      color: rgba(239, 233, 219, 0.2);
-      font-weight: 300;
-      margin-top: -14px;
-    }
-
-    .lo-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-    }
-
-    .lo-card {
-      background: #ffffff;
-      border-radius: 26px;
-      padding: 14px;
-      transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .lo-card:hover {
-      transform: translateY(-14px) scale(1.01);
-      box-shadow: 0 44px 88px rgba(31, 45, 28, 0.15);
-    }
-
-    .lo-card-img {
-      aspect-ratio: 1;
-      border-radius: 20px;
-      background: #efe9db;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 80px;
-      position: relative;
-      overflow: hidden;
-      transition: 0.5s var(--ease);
-    }
-
-    .lo-card:hover .lo-card-img {
-      background: #fff;
-      transform: scale(1.04);
-    }
-
-    .lo-card-img-bg {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle, rgba(0, 79, 105, 0.03) 0%, transparent 70%);
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .lo-card:hover .lo-card-img-bg {
-      opacity: 1;
-    }
-
-    .lo-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: #c3933f;
-      color: #fff;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 7px 16px;
-      border-radius: 40px;
-      z-index: 5;
-      box-shadow: 0 8px 16px rgba(195, 147, 63, 0.3);
-      animation: lo-pulse 2s infinite ease-in-out;
-    }
-
-
-    .lo-card-img img {
-      padding: 20px;
-    }
-
-    .lo-card-img-bg img {
-      padding: 20px;
-    }
-
-    @keyframes lo-pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 4px 12px rgba(213, 111, 83, 0.2);
-      }
-
-      50% {
-        transform: scale(1.06);
-        box-shadow: 0 8px 24px rgba(213, 111, 83, 0.4);
-      }
-
-      100% {
-        transform: scale(1);
-        box-shadow: 0 4px 12px rgba(213, 111, 83, 0.2);
-      }
-    }
-
-    .lo-card-wish,
-    .lo-card-list {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #fff;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      cursor: pointer;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-      opacity: 0;
-      transform: translateY(15px);
-      transition: all 0.5s var(--ease);
-      z-index: 10;
-    }
-
-    .lo-card-list {
-      top: 68px;
-    }
-
-    .lo-card:hover .lo-card-wish,
-    .lo-card:hover .lo-card-list {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .lo-card-wish:hover,
-    .lo-card-list:hover {
-      background: #003548;
-      color: #fff;
-      transform: scale(1.1);
-    }
-
-    .lo-card-body {
-      padding: 22px 10px 14px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .lo-card-cat {
-      font-size: 10px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #d56f53;
-      margin-bottom: 10px;
-    }
-
-    .lo-card-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: #003548;
-      line-height: 1.35;
-      margin-bottom: 18px;
-      transition: color 0.3s;
-    }
-
-    .lo-card:hover .lo-card-name {
-      color: #004f69;
-    }
-
-    .lo-stock {
-      margin-bottom: 22px;
-    }
-
-    .lo-stock-text {
-      font-size: 10.5px;
-      font-weight: 600;
-      color: #7a7a7a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .lo-stock-text b {
-      color: #d56f53;
-      font-weight: 700;
-    }
-
-    .lo-stock-bar {
-      height: 7px;
-      background: #f2f2f2;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-top: 8px;
-      border: 1px solid #ebebeb;
-    }
-
-    .lo-stock-inner {
-      height: 100%;
-      border-radius: 10px;
-      transition: width 1s ease-out;
-      background: linear-gradient(to right, #d56f53, #e8c870);
-    }
-
-    .lo-card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 18px;
-      border-top: 1px solid #f2f2f2;
-      margin-top: auto;
-    }
-
-    .lo-price-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .lo-price-new {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 800;
-      color: #004f69;
-      line-height: 1;
-    }
-
-    .lo-price-old {
-      font-size: 14px;
-      color: #b0b0b0;
-      text-decoration: line-through;
-      font-weight: 400;
-      margin-bottom: 4px;
-    }
-
-    .lo-add-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 16px;
-      border: none;
-      background: #004f69;
-      color: #fff;
-      font-size: 20px;
-      cursor: pointer;
-      transition: all 0.4s var(--ease);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lo-add-btn:hover {
-      background: #e8c870;
-      color: #003548;
-      transform: rotate(90deg) scale(1.1);
-      box-shadow: 0 8px 24px rgba(232, 200, 112, 0.3);
-    }
-
-    @media (max-width: 1100px) {
-      .lo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .lo-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .lo-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-      }
-
-      .lo-timer-wrap {
-        width: 100%;
-        padding: 20px 24px;
-        justify-content: space-between;
-      }
-    }
-
-    .Shopbycollection {
-      height: 255px;
-    }
-
-    /* ─── SHOP BY COLLECTIONS (PRO DESIGN) ─── */
-    .sc-sec {
-      padding: 100px 0;
-      background: var(--white);
-    }
-
-    .sc-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-    }
-
-    .sc-card {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: all .5s var(--ease);
-      aspect-ratio: 0.82;
-      background: #f8faf9;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sc-card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 40px 80px rgba(0, 0, 0, .12);
-    }
-
-    .sc-img-wrap {
-      flex: 1;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      padding: 30px;
-    }
-
-    .sc-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform .8s var(--ease);
-      z-index: 2;
-    }
-
-    .sc-card:hover .sc-img {
-      transform: scale(1.1);
-    }
-
-    .sc-img-glow {
-      position: absolute;
-      width: 60%;
-      height: 60%;
-      background: radial-gradient(circle, var(--teal-pale/0.4) 0%, transparent 70%);
-      filter: blur(40px);
-      z-index: 1;
-      transition: all .6s;
-      opacity: 0;
-    }
-
-    .sc-card:hover .sc-img-glow {
-      opacity: 1;
-      transform: scale(1.5);
-    }
-
-    .sc-info {
-      padding: 24px 28px;
-      background: #fff;
-      z-index: 10;
-      transition: all .4s var(--ease);
-      border-top: 1px solid rgba(0, 0, 0, .03);
-    }
-
-    .sc-card:hover .sc-info {
-      background: var(--teal);
-    }
-
-    .sc-title {
-      font-family: var(--serif);
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: 6px;
-      transition: color .3s;
-    }
-
-    .sc-count {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--ink-mid);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      transition: color .3s;
-    }
-
-    .sc-card:hover .sc-title {
-      color: #fff;
-    }
-
-    .sc-card:hover .sc-count {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .sc-btn-circle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 44px;
-      height: 44px;
-      background: #fff;
-      color: var(--teal);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
-      opacity: 0;
-      transform: scale(0.5);
-      transition: all .4s var(--ease);
-      z-index: 15;
-    }
-
-    .sc-card:hover .sc-btn-circle {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .sc-btn-circle:hover {
-      background: var(--gold);
-      color: #fff;
-    }
-
-    @media (max-width: 1100px) {
-      .sc-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .sc-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .sc-sec {
-        padding: 60px 0;
-      }
-    }
-  </style>
-
+  <link rel="stylesheet" href="assets/css/redesign.css">
 </head>
 
 <body>
@@ -564,134 +22,110 @@
     <button class="psb" onclick="goPg('product',this)">🛏 Product Page</button>
   </div>
 
-  <!-- ═══════════════════════════════════════
-     SHARED HEADER
-═══════════════════════════════════════ -->
   <div id="chrome">
 
-    <!-- Announcement Bar -->
-    <div class="ann">
-      <div class="ann-side">
-        <span>📧 info@spastore.me</span>
-        <span>📞 +971 58 838 2030</span>
-      </div>
-      <div class="ann-center">
-        🚀 <strong>Free Shipping</strong> on orders over AED 500 · UAE · Saudi Arabia · Qatar · Bahrain · Oman · Kuwait
-      </div>
-      <div class="ann-side">
-        <span>AED ▾</span>
-        <span style="opacity:.7;">🇦🇪 🇸🇦 🇶🇦 🇧🇭 🇴🇲 🇰🇼</span>
-      </div>
-    </div>
-
-    <!-- Header -->
+    <!-- ─── MARKETPLACE HEADER (Flagship Retail Style) ─── -->
     <header class="header">
-      <div class="header-top">
-
-        <!-- Search -->
-        <div class="search-bar">
-          <input type="text" placeholder="Search spa beds, massage oils, salon equipment...">
-          <button class="search-btn">🔍</button>
-        </div>
-
-        <!-- Logo -->
-        <div class="logo" onclick="goPg('home',null)">
-          <svg class="logo-svg" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="21" cy="21" r="19" fill="#efe9db" stroke="#2d7d72" stroke-width="1.5" />
-            <path d="M21 7 C21 7, 31 13, 31 21 C31 29, 21 35, 21 35 C21 35, 11 29, 11 21 C11 13, 21 7, 21 7Z"
-              fill="#2d7d72" opacity="0.25" />
-            <circle cx="21" cy="21" r="5" fill="#2d7d72" />
-            <circle cx="21" cy="21" r="2.5" fill="#c3933f" />
-            <path d="M21 7 Q28 14 21 21 Q14 14 21 7Z" fill="#2d7d72" opacity="0.15" />
-            <path d="M11 21 Q18 28 21 21 Q24 28 31 21" stroke="#2d7d72" stroke-width="1" fill="none"
-              stroke-linecap="round" opacity="0.4" />
-          </svg>
-          <div class="logo-text-wrap">
-            <span class="logo-name">SPA STORE</span>
-            <span class="logo-tagline">GCC Premium Wellness</span>
+      <!-- Announcement Tier -->
+      <div class="h-top-bar">
+        <div class="w header-flex">
+          <div class="ht-left">
+            <span>📞 +971 58 838 2030</span>
+            <span class="sep">|</span>
+            <span>📧 info@spastore.me</span>
           </div>
-        </div>
-
-        <!-- Icons -->
-        <div class="hdr-icons">
-          <div class="hdr-icon">
-            <svg viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <span>Search</span>
+          <div class="ht-center">
+            🚚 <b>FREE SHIPPING</b> ON ORDERS OVER AED 500 across GCC region!
           </div>
-          <div class="hdr-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-            <span>Account</span>
-          </div>
-          <div class="hdr-icon">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-            </svg>
-            <span>Wishlist</span>
-          </div>
-          <div class="hdr-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg>
-            <span>Cart</span>
-            <div class="badge">3</div>
+          <div class="ht-right">
+            <span class="ht-link">Track Order</span>
+            <span class="ht-link">Login</span>
+            <span class="curr-sw">AED 🇦🇪 ▾</span>
           </div>
         </div>
       </div>
 
-      <!-- Nav Bar -->
-      <nav class="nav-bar">
-        <div class="nav-inner">
-          <span class="nav-item hot">🔥 Offers</span>
-          <span class="nav-item active">
-            Spa Products <span class="arrow">▾</span>
-            <div class="mega-drop">
-              <div class="mega-col">
-                <h6>All Products</h6>
-                <ul>
-                  <li><a href="#">All Products</a></li>
-                  <li><a href="#">Best Sellers</a></li>
-                  <li><a href="#">New Arrivals</a></li>
-                  <li><a href="#">Gift Sets</a></li>
-                </ul>
+      <!-- Main Header Tier -->
+      <div class="header-main">
+        <div class="w header-flex">
+          <div class="logo-area" onclick="goPg('home',null)">
+            <div class="logo-main">SPA<span>STORE</span></div>
+            <div class="logo-tag">Premium Wellness Supplies</div>
+          </div>
+
+          <div class="header-search-wrap">
+            <div class="search-cat-trigger">All Products ▾</div>
+            <input type="text" placeholder="Search for Massage Beds, Sauna, Hotel Supplies...">
+            <button class="search-icon-btn">🔍</button>
+          </div>
+
+          <div class="header-utilities">
+            <div class="ut-link-item">
+              <span class="ut-ico">👤</span>
+              <div class="ut-txt"><span>Hello, Guest</span><b>Sign In / Join</b></div>
+            </div>
+            <div class="ut-link-item">
+              <span class="ut-ico">♡</span>
+              <div class="ut-txt"><span>Wishlist</span><b>0 Items</b></div>
+            </div>
+            <div class="ut-link-item cart-trigger" onclick="goPg('cart',null)">
+              <div class="cart-viz">
+                <span class="ut-ico">🛒</span>
+                <span class="cart-pill">3</span>
               </div>
-              <div class="mega-col">
-                <h6>By Category</h6>
-                <ul>
-                  <li><a href="#">Massage Beds</a></li>
-                  <li><a href="#">Massage Oils</a></li>
-                  <li><a href="#">Accessories</a></li>
-                  <li><a href="#">Disposables</a></li>
-                  <li><a href="#">Sauna</a></li>
-                  <li><a href="#">Hot Stone Therapy</a></li>
-                </ul>
-              </div>
-              <div class="mega-col">
-                <h6>By Concern</h6>
-                <ul>
-                  <li><a href="#">Pain Relief</a></li>
-                  <li><a href="#">Deep Relaxation</a></li>
-                  <li><a href="#">Aromatherapy</a></li>
-                  <li><a href="#">Detox & Steam</a></li>
-                </ul>
+              <div class="ut-txt"><span>My Cart</span><b>AED 1,850.00</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Tier -->
+      <nav class="header-nav">
+        <div class="w header-flex">
+          <div class="all-depts" id="deptsToggle">
+            <span class="depts-ico">☰</span> SHOP BY CATEGORIES
+            <!-- Categories Dropdown -->
+            <div class="depts-dropdown">
+              <div class="dd-inner">
+                <div class="dd-col">
+                  <h6>Spa & Massage</h6>
+                  <ul>
+                    <li><a href="#">Electric Spa Tables</a></li>
+                    <li><a href="#">Wooden Massage Beds</a></li>
+                    <li><a href="#">Massage Oils & Creams</a></li>
+                    <li><a href="#">Hot Stone Sets</a></li>
+                  </ul>
+                </div>
+                <div class="dd-col">
+                  <h6>Salon & Furniture</h6>
+                  <ul>
+                    <li><a href="#">Styling Chairs</a></li>
+                    <li><a href="#">Trolleys & Stools</a></li>
+                    <li><a href="#">Professional Lighting</a></li>
+                  </ul>
+                </div>
+                <div class="dd-col">
+                  <h6>Sauna & Steam</h6>
+                  <ul>
+                    <li><a href="#">Sauna Buckets & Ladles</a></li>
+                    <li><a href="#">Heater Stones</a></li>
+                    <li><a href="#">Traditional Sauna Kit</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </span>
-          <span class="nav-item">Salon Products <span class="arrow">▾</span></span>
-          <span class="nav-item">Recreation <span class="arrow">▾</span></span>
-          <span class="nav-item">Hotel Products <span class="arrow">▾</span></span>
-          <span class="nav-item">About Us</span>
-          <span class="nav-item">Support</span>
-          <div class="nav-right-links">
-            <span class="nav-offer">🎁 Spring Sale Up to 30% Off</span>
+          </div>
+          
+          <div class="nav-links-wrap">
+            <a href="#" class="nav-l active">Best Sellers</a>
+            <a href="#" class="nav-l">New Arrivals</a>
+            <a href="#" class="nav-l">Clearance Sale</a>
+            <a href="#" class="nav-l">Bulk Orders</a>
+            <a href="#" class="nav-l">Support</a>
+          </div>
+
+          <div class="nav-promo-side">
+            ⚡ <b>SPRING DEALS</b> - SAVE 30%
           </div>
         </div>
       </nav>
@@ -704,106 +138,81 @@
 ═══════════════════════════════════════ -->
   <div id="page-home" class="page active">
 
-    <!-- ─── HERO SLIDER ─── -->
-    <section class="hero">
-      <div class="hero-track" id="heroTrack">
-
-        <div class="hero-slide hs1">
-          <div class="hero-slide-content">
-            <div class="hs-tag">✨ Bestseller Collection 2026</div>
-            <h1 class="hs-headline">Upgrade Your<br><em>Spa Experience</em></h1>
-            <p class="hs-sub">Discover the fusion of innovative technology and therapeutic luxury. Premium spa beds,
-              massage oils & salon equipment.</p>
-            <div class="hs-btns">
-              <button class="btn-gold">Explore Collection →</button>
-              <button class="btn-outline-w">View Catalogue</button>
+    <!-- ─── MARKETPLACE HERO (Split Layout) ─── -->
+    <div class="marketplace-hero w">
+      <div class="hero-left">
+        <section class="hero-slider">
+          <div class="hero-track" id="heroTrack">
+            <!-- Slide 1 -->
+            <div class="hero-slide hs1">
+              <div class="hero-slide-content">
+                <div class="hs-tag">✨ SPA WORLD 2026</div>
+                <h1 class="hs-headline">Premium <em>Wellness</em> Supplies</h1>
+                <p class="hs-sub">Trusted by top spa resorts & professionals across the GCC region.</p>
+                <div class="hs-btns">
+                  <button class="btn-gold">Shop Collection</button>
+                </div>
+              </div>
+              <div class="hs-visual">
+                <img src="assets/img/png/Premium Electric Spa Table.png" alt="">
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero-slide hs2">
+              <div class="hero-slide-content">
+                <div class="hs-tag">🌿 NATURE'S BEST</div>
+                <h1 class="hs-headline">Organic <em>Massage</em> Oils</h1>
+                <p class="hs-sub">100% Pure essential oils for the ultimate therapeutic experience.</p>
+                <div class="hs-btns">
+                  <button class="btn-gold">Explore Range</button>
+                </div>
+              </div>
+              <div class="hs-visual">
+                <img src="assets/img/png/Aromatherapy Massage Oil.png" alt="">
+              </div>
             </div>
           </div>
-          <div class="hs-visual">
-            <img src="assets/img/spa-beds.webp" class="img-fluid " alt="">
+          <button class="harr prev" onclick="mvSlide(-1)">‹</button>
+          <button class="harr next" onclick="mvSlide(1)">›</button>
+          <div class="hero-dots">
+            <button class="hdot on" onclick="goSl(0)"></button>
+            <button class="hdot" onclick="goSl(1)"></button>
           </div>
-        </div>
-
-        <div class="hero-slide hs2">
-          <div class="hero-slide-content">
-            <div class="hs-tag">🌿 Spring Wellness Edit</div>
-            <h1 class="hs-headline">Aromatherapy<br><em>& Massage Oils</em></h1>
-            <p class="hs-sub">Premium essential and massage oils trusted by therapists and spa professionals across the
-              Gulf region.</p>
-            <div class="hs-btns">
-              <button class="btn-gold">Shop Oils →</button>
-              <button class="btn-outline-w">Learn More</button>
-            </div>
-          </div>
-          <div class="hs-visual">
-            <img src="assets/img/massage-oil.webp" class="img-fluid " alt="">
-          </div>
-        </div>
-
-        <div class="hero-slide hs3">
-          <div class="hero-slide-content">
-            <div class="hs-tag">🏨 Hotel & Hospitality Range</div>
-            <h1 class="hs-headline">Hotel<br><em>Essentials</em></h1>
-            <p class="hs-sub">Bathrobes, towels, slippers & premium linens. Trusted by five-star hotels and spa resorts
-              across the GCC.</p>
-            <div class="hs-btns">
-              <button class="btn-gold">Shop Hotel →</button>
-              <button class="btn-outline-w">View All</button>
-            </div>
-          </div>
-          <div class="hs-visual">
-            <img src="assets/img/towels.webp" class="img-fluid " alt="">
-          </div>
-        </div>
-
+        </section>
       </div>
-      <button class="harr prev" onclick="mvSlide(-1)">‹</button>
-      <button class="harr next" onclick="mvSlide(1)">›</button>
-      <div class="hero-dots">
-        <button class="hdot on" onclick="goSl(0)"></button>
-        <button class="hdot" onclick="goSl(1)"></button>
-        <button class="hdot" onclick="goSl(2)"></button>
+      <div class="hero-right">
+        <div class="hero-promo-card">
+          <div class="pc-tag">Flash Sale</div>
+          <h5>Limited Offers Up to 30% Off</h5>
+          <a href="#" class="pc-link">Explore →</a>
+          <img src="assets/img/png/Basalt Hot Stone Therapy.png" alt="">
+        </div>
+        <div class="hero-promo-card hp-gold">
+          <div class="pc-tag">Professional</div>
+          <h5>Equip Your Entire Salon</h5>
+          <a href="#" class="pc-link">Catalogue →</a>
+          <img src="assets/img/png/Mineral Salt Body Scrub.png" alt="">
+        </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ─── TRUST BAR ─── -->
-    <div class="trust">
-      <div class="trust-inner">
-        <div class="ti">
-          <div class="ti-icon">🚚</div>
-          <div>
-            <div class="ti-label">Fast Shipping</div>
-            <div class="ti-sub">UAE & all GCC countries</div>
-          </div>
-        </div>
-        <div class="ti">
-          <div class="ti-icon">🔒</div>
-          <div>
-            <div class="ti-label">Secure Payment</div>
-            <div class="ti-sub">Encrypted & safe checkout</div>
-          </div>
-        </div>
-        <div class="ti">
-          <div class="ti-icon">✅</div>
-          <div>
-            <div class="ti-label">Certified Quality</div>
-            <div class="ti-sub">Professional grade only</div>
-          </div>
-        </div>
-        <div class="ti">
-          <div class="ti-icon">💬</div>
-          <div>
-            <div class="ti-label">WhatsApp Support</div>
-            <div class="ti-sub">7 days a week</div>
-          </div>
-        </div>
-        <div class="ti">
-          <div class="ti-icon">🔄</div>
-          <div>
-            <div class="ti-label">30-Day Returns</div>
-            <div class="ti-sub">Hassle-free policy</div>
-          </div>
-        </div>
+    <!-- ─── MARKETPLACE TRUST BAR ─── -->
+    <div class="trust-bar w">
+      <div class="trust-item">
+        <span class="ti-icon">🚚</span>
+        <div class="ti-text"><b>Fast GCC Shipping</b><span>Delivery within 2-4 days</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ti-icon">🛡️</span>
+        <div class="ti-text"><b>Secure Payments</b><span>100% Secure Checkout</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ti-icon">💎</span>
+        <div class="ti-text"><b>Premium Quality</b><span>Professional grade items</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ti-icon">📞</span>
+        <div class="ti-text"><b>Expert Support</b><span>7 days specialized help</span></div>
       </div>
     </div>
 
@@ -1112,8 +521,9 @@
         <div class="sec-head" style="margin-bottom:48px;">
           <div class="reveal">
             <div class="sc-eyebrow"
-              style="font-size: 11px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--terra); margin-bottom:12px;">
+              style="font-size: 11px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom:12px;">
               Premium Selection</div>
+
             <h2 class="sec-title" style="font-size: clamp(32px, 3.5vw, 52px); font-family: var(--serif); margin:0;">Shop
               by <em>Collections</em></h2>
           </div>
@@ -1294,6 +704,13 @@
               <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#A8B4C5,#2C3E50);">
                 <img src="assets/img/png/Premium Electric Spa Table.png" alt="">
               </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Spa Equipment</div>
@@ -1308,6 +725,13 @@
               <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#C4D5A8,#595F39);">
                 <img src="assets/img/png/Ayurvedic Herbal Compress Bags.png" alt="">
               </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Disposables</div>
@@ -1322,6 +746,13 @@
               <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#D5C4B4,#B89B82);">
                 <img src="assets/img/png/Mineral Salt Body Scrub.png" alt="">
               </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Body Care</div>
@@ -1336,6 +767,13 @@
               <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#D5C4A8,#8B6E52);">
                 <img src="assets/img/png/Cedar Sauna Bench Seat.png" alt="">
               </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Sauna</div>
@@ -1350,6 +788,13 @@
               <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#A8D5E4,#004F69);">
                 <img src="assets/img/png/Ultrasonic Aroma Diffuser 500ml.png" alt="">
               </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Aromatherapy</div>
@@ -1364,6 +809,13 @@
               <div class="na2-card-img-inner" style="background:linear-gradient(145deg,#E4D0B4,#E8A020);">
                 <img src="assets/img/png/Copper Oil Burner.png" alt="">
               </div><span class="na2-card-badge na2-b-new">New</span>
+              <div class="na2-card-overlay">
+                <div class="na2-overlay-row">
+                  <button class="na2-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="na2-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="na2-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="na2-card-body">
               <div class="na2-card-cat">Hotel Décor</div>
@@ -1557,44 +1009,29 @@
       </div>
     </section>
 
-    <!-- ─── LIMITED OFFERS (sale grid) ─── -->
-    <section class="lo-sec">
+    <!-- ─── LIMITED OFFERS (Marketplace Grid) ─── -->
+    <section class="sec">
       <div class="w">
-        <div class="lo-header reveal">
-          <div class="lo-title-wrap">
-            <span class="lo-eyebrow">Hot Sale — Active Now</span>
-            <h2 class="lo-title">Limited <em>Offers</em></h2>
-          </div>
-          <div class="lo-timer-wrap">
-            <span class="lo-timer-label">Ending In:</span>
-            <div class="lo-timer">
-              <div class="lo-t-unit">
-                <div class="lo-t-num" id="th2">08</div>
-                <div class="lo-t-lab">Hrs</div>
-              </div>
-              <div class="lo-t-sep">:</div>
-              <div class="lo-t-unit">
-                <div class="lo-t-num" id="tm2">34</div>
-                <div class="lo-t-lab">Min</div>
-              </div>
-              <div class="lo-t-sep">:</div>
-              <div class="lo-t-unit">
-                <div class="lo-t-num" id="ts2">22</div>
-                <div class="lo-t-lab">Sec</div>
-              </div>
-            </div>
-          </div>
+        <div class="sec-head">
+          <div class="sec-eyebrow">Deal of the Day</div>
+          <h2 class="sec-title">Limited <em>Special Offers</em></h2>
+          <div class="sec-rule"></div>
         </div>
 
-        <div class="lo-grid">
+        <div class="mp-grid">
           <!-- Card 1 -->
           <div class="lo-card reveal">
-            <button class="lo-card-wish" title="Add to Wishlist">♡</button>
-            <button class="lo-card-list" title="Add to List">📋</button>
-            <div class="lo-badge">−30% OFF</div>
             <div class="lo-card-img">
+              <div class="lo-badge">−30% OFF</div>
               <div class="lo-card-img-bg"></div>
               <img src="assets/img/png/Premium Turkish Waffle.png" alt="">
+              <div class="lo-card-overlay">
+                <div class="lo-overlay-row">
+                  <button class="lo-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="lo-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="lo-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="lo-card-body">
               <div class="lo-card-cat">Hotel Products</div>
@@ -1610,19 +1047,23 @@
                   <span class="lo-price-old">AED 220</span>
                   <span class="lo-price-new">AED 160</span>
                 </div>
-                <button class="lo-add-btn">+</button>
               </div>
             </div>
           </div>
 
           <!-- Card 2 -->
           <div class="lo-card reveal d1">
-            <button class="lo-card-wish" title="Add to Wishlist">♡</button>
-            <button class="lo-card-list" title="Add to List">📋</button>
-            <div class="lo-badge">−25% OFF</div>
             <div class="lo-card-img">
+              <div class="lo-badge">−25% OFF</div>
               <div class="lo-card-img-bg"></div>
               <img src="assets/img/png/Basalt Hot Stone Therapy.png" alt="">
+              <div class="lo-card-overlay">
+                <div class="lo-overlay-row">
+                  <button class="lo-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="lo-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="lo-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="lo-card-body">
               <div class="lo-card-cat">Accessories</div>
@@ -1638,19 +1079,23 @@
                   <span class="lo-price-old">AED 480</span>
                   <span class="lo-price-new">AED 325</span>
                 </div>
-                <button class="lo-add-btn">+</button>
               </div>
             </div>
           </div>
 
           <!-- Card 3 -->
           <div class="lo-card reveal d2">
-            <button class="lo-card-wish" title="Add to Wishlist">♡</button>
-            <button class="lo-card-list" title="Add to List">📋</button>
-            <div class="lo-badge">−20% OFF</div>
             <div class="lo-card-img">
+              <div class="lo-badge">−20% OFF</div>
               <div class="lo-card-img-bg"></div>
               <img src="assets/img/png/ErgoComfort 360.png" alt="">
+              <div class="lo-card-overlay">
+                <div class="lo-overlay-row">
+                  <button class="lo-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="lo-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="lo-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="lo-card-body">
               <div class="lo-card-cat">Furniture</div>
@@ -1666,19 +1111,23 @@
                   <span class="lo-price-old">AED 290</span>
                   <span class="lo-price-new">AED 232</span>
                 </div>
-                <button class="lo-add-btn">+</button>
               </div>
             </div>
           </div>
 
           <!-- Card 4 -->
           <div class="lo-card reveal d3">
-            <button class="lo-card-wish" title="Add to Wishlist">♡</button>
-            <button class="lo-card-list" title="Add to List">📋</button>
-            <div class="lo-badge">−15% OFF</div>
             <div class="lo-card-img">
+              <div class="lo-badge">−15% OFF</div>
               <div class="lo-card-img-bg"></div>
               <img src="assets/img/png/Professional Red Cedar.png" alt="">
+              <div class="lo-card-overlay">
+                <div class="lo-overlay-row">
+                  <button class="lo-card-wish" title="Add to Wishlist">♡</button>
+                  <button class="lo-card-list" title="Add to List">📋</button>
+                </div>
+                <button class="lo-card-quick-add">🛒 Quick Add</button>
+              </div>
             </div>
             <div class="lo-card-body">
               <div class="lo-card-cat">Sauna</div>
@@ -1694,7 +1143,6 @@
                   <span class="lo-price-old">AED 195</span>
                   <span class="lo-price-new">AED 166</span>
                 </div>
-                <button class="lo-add-btn">+</button>
               </div>
             </div>
           </div>
@@ -1748,8 +1196,8 @@
             </div>
           </div>
           <div class="fc-card" onclick="goPg('product',null)"><button class="fc-card-wish">♡</button>
-            <div class="fc-card-img" style="background:#eef4f2;height:180px;font-size:60px;"><span
-                class="fc-card-emoji">
+            <div class="fc-card-img" style="background:#eef4f2;height:180px;font-size:60px;">
+              <span class="fc-card-emoji">
                 <img src="assets/img/png/Facial Steamer Pro.png" alt="">
               </span>
               <div class="fc-card-img-bg"></div>
@@ -1764,8 +1212,8 @@
             </div>
           </div>
           <div class="fc-card" onclick="goPg('product',null)"><button class="fc-card-wish">♡</button>
-            <div class="fc-card-img" style="background:#f4f0ec;height:180px;font-size:60px;"><span
-                class="fc-card-emoji">
+            <div class="fc-card-img" style="background:#f4f0ec;height:180px;font-size:60px;">
+              <span class="fc-card-emoji">
                 <img src="assets/img/png/Cedar Sauna Buckets.png" alt="">
               </span>
               <div class="fc-card-img-bg"></div>
@@ -1781,8 +1229,8 @@
           </div>
           <div class="fc-card" onclick="goPg('product',null)">
             <div class="fc-card-badge fc-badge-sale">-20%</div><button class="fc-card-wish">♡</button>
-            <div class="fc-card-img" style="background:#eef4f2;height:180px;font-size:60px;"><span
-                class="fc-card-emoji">
+            <div class="fc-card-img" style="background:#eef4f2;height:180px;font-size:60px;">
+              <span class="fc-card-emoji">
                 <img src="assets/img/png/Massage Stool 360.png" alt="">
               </span>
               <div class="fc-card-img-bg"></div>
@@ -2664,12 +2112,24 @@
       fatcObs.observe(pdAnch);
     }
 
-    // Rev pagination buttons
-    document.querySelectorAll('.rev-page-btn').forEach(b => b.addEventListener('click', function () {
-      document.querySelectorAll('.rev-page-btn').forEach(x => x.classList.remove('on')); this.classList.add('on');
-    }));
+    // ALL CATEGORIES TOGGLE (Dropdown Support)
+    const deptsBtn = document.getElementById('deptsToggle');
+    if (deptsBtn) {
+      deptsBtn.addEventListener('click', function(e) {
+        if (window.innerWidth <= 1024) {
+          this.classList.toggle('is-open'); // Mobile toggle
+        }
+      });
+    }
+
+    // HERO SLIDER LOGIC
+    let curSl = 0;
+    const track = document.getElementById('heroTrack');
+    function mvSlide(dir) {
+      if (!track) return;
+      curSl = (dir === 1) ? (curSl + 1) % 2 : (curSl - 1 + 2) % 2;
+      track.style.transform = `translateX(-${curSl * 100}%)`;
+    }
   </script>
-
 </body>
-
 </html>
