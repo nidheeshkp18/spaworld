@@ -899,11 +899,10 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     gap: 16px;
      background: #ffffff;
      border: 2px solid #eeece8;
      border-radius: 16px;
-     padding: 24px 12px;
+     padding: 10px 3px 3px 3px;
      cursor: pointer;
      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
      text-align: center;
@@ -913,7 +912,6 @@
 
  .ci:hover {
      border-color: var(--teal);
-     background: #ffffff;
      transform: translateY(-8px);
      box-shadow: 0 15px 45px rgba(45, 125, 114, 0.12);
  }
@@ -938,18 +936,24 @@
  }
 
  .ci-label {
+     background: var(--teal);
+     color: #fff !important;
+     padding: 12px 5px;
+     border-radius: 12px;
+     width: 100%;
+     text-align: center;
+     text-transform: none;
      font-size: 11.5px;
      font-weight: 700;
      letter-spacing: 0.05em;
-     color: var(--text);
      line-height: 1.3;
-     text-transform: uppercase;
-     transition: color 0.3s;
      z-index: 2;
+     margin-top: 10px;
+     transition: all 0.3s;
  }
 
  .ci:hover .ci-label {
-     color: var(--teal);
+     background: var(--teal-mid);
  }
 
  /* ═══════════════════════════════

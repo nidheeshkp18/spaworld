@@ -46,4 +46,5 @@ git push -u origin main
 https://nidheeshkp18.github.io/spaworld/
 https://nidheeshkp18.github.io/spaworld/spastore-v5/
 https://nidheeshkp18.github.io/spaworld/spastore-v6/
+https://nidheeshkp18.github.io/spaworld/spastore-v7/
 
