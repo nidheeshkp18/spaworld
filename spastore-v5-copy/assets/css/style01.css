@@ -30,8 +30,8 @@
      --grad-gold: linear-gradient(120deg, #c3933f, #6b9d78);
      --grad-hero: linear-gradient(135deg, #2d7d72, #1f2d1c);
 
-     --font-display: 'Playfair Display', serif;
-     --font-ui: 'Nunito', sans-serif;
+     --font-display: 'Poppins', sans-serif;
+     --font-ui: 'Poppins', sans-serif;
 
      --max: 1340px;
      --side: 48px;
