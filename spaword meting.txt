@@ -1,0 +1,115 @@
+https://www.figma.com/design/SsY5SIGBEN50Rurh65C9jp/Medx-Pharmacy?node-id=8002-8212&p=f
+
+
+
+
+I’ve reviewed the current website and your suggestions. From a product design perspective, I believe we can structure the homepage to better align with B2B users across the GCC market, especially for Spa, Salon, Hotel, and Gym segments.
+ 
+I recommend organizing the homepage into key sections such as:
+ 
+Business-based entry points (Spa, Salon, Hotel, Gym)
+Shop by categories
+Bestsellers & curated professional kits
+New arrivals & bulk offers
+Industry-specific sections (e.g., hotel amenities)
+Trust-building blocks (testimonials, client base, certifications)
+Lead generation (bulk inquiry / exclusive deals)
+ 
+Additionally, we can enhance the experience by focusing on bulk buying behavior, clearer product discovery, and stronger trust signals, which are critical for B2B customers in the GCC region.
+ 
+I’ll prepare a structured section-wise layout along with wireframe direction to take this forward.
+ 
+_____________________________________________________________________________________________________
+ 
+ 
+Recommended Homepage Structure (Optimized)
+ 
+1. Hero Section (Above the Fold)
+ 
+Goal: Instant clarity + positioning
+ 
+Headline: “Premium Spa & Salon Supplies for GCC Businesses”
+Subtext: Bulk orders | Fast UAE Delivery | Trusted by 500+ businesses
+CTA:
+Shop by Category
+Request Bulk Pricing
+ 
+2. Shop by Business Type (Very Important for B2B)
+ 
+Segment users early
+ 
+Spa
+Salon
+Hotel
+Gym
+ 
+This reduces friction + improves relevance
+ 
+3. Shop by Categories
+Skincare
+Massage Products
+Equipment
+Linen & Towels
+Amenities
+ 
+4. Bestsellers / Trusted Products
+ 
+Social proof-driven
+ 
+“Trusted by 500+ Spas & Salons”
+ 
+5. Curated for Professionals
+ 
+Contextual bundles
+ 
+Spa Essentials Kit
+Salon Starter Pack
+Hotel Amenity Sets
+ 
+Very useful for B2B bulk buyers
+ 
+6. New Arrivals / Fresh Stock
+“Fresh Stock for Your Spa”
+ 
+7. Offers / Bulk Deals Section
+ 
+Critical for GCC B2B
+ 
+“Today’s Best Deals”
+“Bulk Discounts Available”
+ 
+8. Industry-Specific Section (High Value)
+ 
+Example:
+ 
+“Equip Your Hotel to the Highest Standard”
+With subtext for amenities, linen, etc.
+ 
+9. Product of the Month / Featured Brand
+Build authority + highlight premium products
+ 
+10. Why Trust Us (Trust Section)
+ 
+Very important for GCC buyers
+ 
+500+ businesses served
+Fast delivery in UAE/GCC
+Quality assurance
+Bulk pricing support
+ 
+11. Testimonials / Reviews
+“Hear It from the Pros”
+ 
+12. Social Proof / Community
+Instagram / real spa setups
+“Our Social Collections”
+ 
+13. Lead Capture (B2B Focused)
+“Join 1000+ Professionals”
+Email / WhatsApp CTA
+ 
+14. Footer (Enhanced)
+Business support
+Bulk inquiry
+GCC shipping info
+

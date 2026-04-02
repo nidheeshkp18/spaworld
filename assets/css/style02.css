@@ -3166,349 +3166,224 @@
    aspect-ratio: 1;
    overflow: hidden;
    position: relative;
- }
+  }
 
- .bs-card-img-inner {
-   width: 100%;
-   height: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 80px;
-   transition: transform .7s var(--ease), filter .4s var(--ease);
- }
+  /* --- EDITORIAL BANNERS (eb-*) --- */
+  .eb-sec {
+    padding: 120px 0;
+    background: #ffffff;
+  }
 
- .bs-card:hover .bs-card-img-inner {
-   transform: scale(1.1) rotate(2deg);
-   filter: contrast(1.05);
- }
+  .eb-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 
- .bs-card-img-inner img {
-   padding: 15px;
- }
+  .eb-banner {
+    border-radius: 48px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    cursor: pointer;
+    transition: all .8s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+  }
 
- .na2-card-img-inner img {
-   height: 290px;
-   object-fit: cover;
-   padding: 15px;
- }
+  /* Item 1 Vertical Layout */
+  .eb-item-1 {
+    flex-direction: column;
+  }
 
- .bs-card-badge {
-   position: absolute;
-   top: 14px;
-   left: 14px;
-   font-size: 10.5px;
-   font-weight: 700;
-   letter-spacing: .09em;
-   text-transform: uppercase;
-   padding: 5px 13px;
-   border-radius: 20px;
-   z-index: 10;
-   transform: translateZ(0);
- }
+  .eb-banner:hover {
+    transform: translateY(-12px) scale(1.005);
+    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.1);
+  }
 
- .bs-badge-sale {
-   background: var(--terra);
-   color: var(--white);
- }
+  .eb-tall {
+    grid-row: span 2;
+  }
 
- .bs-badge-new {
-   background: var(--sage-deep);
-   color: var(--white);
- }
+  .eb-banner-bg, .eb-banner-overlay {
+    display: none;
+  }
 
- .bs-badge-hot {
-   background: var(--gold);
-   color: var(--white);
- }
+  /* Attractive "Vibrant Wellness" Image Backgrounds */
+  .eb-banner-icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    padding: 40px;
+    transition: all 0.6s var(--ease);
+  }
 
- .bs-card-overlay {
-   position: absolute;
-   bottom: 14px;
-   left: 14px;
-   right: 14px;
-   display: flex;
-   gap: 8px;
-   opacity: 0;
-   transform: translateY(12px);
-   transition: all .35s var(--ease);
-   z-index: 20;
- }
+  /* Colorful and "Attractive" Studio Spotlights */
+  .eb-item-1 .eb-banner-icon {
+    background: radial-gradient(circle at center, #ffffff 0%, #e0f2f7 50%, #c5e6f0 100%);
+    flex: 1.2;
+  }
+  
+  .eb-item-2 .eb-banner-icon { 
+    background: radial-gradient(circle at center, #ffffff 0%, #f4f8e6 50%, #e8efcf 100%);
+  }
+  
+  .eb-item-3 .eb-banner-icon { 
+    background: radial-gradient(circle at center, #ffffff 0%, #f9f4ec 50%, #f0e6d6 100%);
+  }
+  
+  /* Accent light highlight on hover */
+  .eb-banner-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s var(--ease);
+    z-index: 2;
+  }
 
- .bs-card:hover .bs-card-overlay {
-   opacity: 1;
-   transform: translateY(0);
- }
+  .eb-banner:hover .eb-banner-icon::before {
+    opacity: 1;
+  }
 
- .bs-card-quick-add {
-   flex: 1;
-   background: rgba(255, 255, 255, .98);
-   border: none;
-   border-radius: 10px;
-   padding: 12px;
-   font-family: var(--sans);
-   font-size: 11px;
-   font-weight: 700;
-   letter-spacing: .08em;
-   text-transform: uppercase;
-   color: var(--teal);
-   cursor: pointer;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 6px;
-   box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
-   transition: all .25s var(--ease);
- }
+  .eb-banner-icon img {
+    max-width: 85%;
+    max-height: 80%;
+    object-fit: contain;
+    position: relative;
+    z-index: 10;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.12));
+  }
 
- .bs-card-quick-add:hover {
-   background: var(--teal);
-   color: var(--white);
-   transform: scale(1.03);
- }
+  .eb-banner:hover .eb-banner-icon img {
+    transform: scale(1.18) rotate(3deg) translateY(-12px);
+    filter: drop-shadow(0 50px 80px rgba(0, 0, 0, 0.18));
+  }
 
- .bs-card-wish,
- .bs-card-list {
-   width: 44px;
-   height: 44px;
-   border-radius: 10px;
-   background: rgba(255, 255, 255, .98);
-   border: none;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 16px;
-   cursor: pointer;
-   box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
-   transition: all .25s var(--ease);
- }
+  .eb-banner-content {
+    flex: 1.1;
+    padding: 60px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.4s var(--ease);
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Soft split line */
+  }
 
- .bs-card-wish:hover {
-   background: var(--gold);
-   color: var(--white);
-   transform: scale(1.1);
-   box-shadow: 0 10px 25px rgba(195, 147, 63, 0.2);
- }
+  .eb-tall .eb-banner-content {
+    padding: 80px 60px;
+    text-align: center;
+    align-items: center;
+  }
 
- .bs-card-list:hover {
-   background: var(--teal);
-   color: var(--white);
-   transform: scale(1.1);
-   box-shadow: 0 10px 25px rgba(0, 79, 105, 0.2);
- }
+  /* Vibrant Attractive Content Gradients */
+  .eb-item-1 .eb-banner-content { background: linear-gradient(145deg, #00445a 0%, #004f69 50%, #006380 100%); }
+  .eb-item-2 .eb-banner-content { background: linear-gradient(145deg, #3f4f1e 0%, #4a5d23 50%, #60792d 100%); }
+  .eb-item-3 .eb-banner-content { background: linear-gradient(145deg, #8b6e5b 0%, #a0816c 50%, #ba9b85 100%); }
 
- .bs-card-body {
-   padding: 20px 20px 24px;
- }
+  .eb-banner-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 28px;
+    display: block;
+  }
 
- .bs-card-cat {
-   font-size: 10px;
-   font-weight: 700;
-   letter-spacing: .15em;
-   text-transform: uppercase;
-   color: var(--terra);
-   margin-bottom: 8px;
-   transition: color .3s;
- }
+  .eb-banner-title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.2vw, 48px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Extra contrast */
+  }
 
- .bs-card:hover .bs-card-cat {
-   color: var(--teal);
- }
+  .eb-item-2 .eb-banner-title,
+  .eb-item-3 .eb-banner-title {
+    font-size: clamp(22px, 2.5vw, 36px);
+  }
 
- .bs-card-title {
-   font-family: var(--serif);
-   font-size: 17px;
-   font-weight: 600;
-   color: var(--ink);
-   line-height: 1.35;
-   margin-bottom: 14px;
-   display: -webkit-box;
-   -webkit-line-clamp: 2;
-   -webkit-box-orient: vertical;
-   overflow: hidden;
-   transition: color .3s;
- }
+  .eb-banner-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    transition: all .4s var(--ease);
+    position: relative;
+    padding-bottom: 10px;
+    text-decoration: none;
+  }
 
- .bs-card:hover .bs-card-title {
-   color: var(--teal);
- }
+  .eb-banner-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2.5px;
+    background: currentColor;
+    transition: width 0.4s var(--ease);
+    opacity: 0.7;
+  }
 
- .bs-card-foot {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
- }
+  .eb-banner:hover .eb-banner-link {
+    color: #ffffff;
+    gap: 24px;
+    letter-spacing: .3em;
+  }
 
- .bs-card-price {
-   font-family: var(--serif);
-   font-size: 23px;
-   font-weight: 700;
-   color: var(--teal);
- }
+  .eb-banner:hover .eb-banner-link::after {
+    width: 100%;
+    opacity: 1;
+  }
 
- .bs-card-was {
-   font-size: 13px;
-   color: var(--ink-pale);
-   text-decoration: line-through;
-   margin-left: 6px;
-   font-family: var(--sans);
-   font-weight: 300;
- }
+  @media (max-width: 1100px) {
+    .eb-grid {
+      grid-template-columns: 1fr;
+      padding: 0 24px;
+    }
+    .eb-tall {
+      grid-row: span 1;
+    }
+    .eb-banner {
+      min-height: 480px;
+    }
+  }
 
- .bs-card-stars {
-   color: var(--gold);
-   font-size: 12.5px;
-   display: flex;
-   align-items: center;
-   gap: 4px;
- }
+  @media (max-width: 600px) {
+    .eb-banner {
+      flex-direction: column;
+    }
+    .eb-banner-icon {
+      height: 350px;
+      flex: none;
+    }
+    .eb-banner-content {
+      padding: 60px 40px;
+      flex: none;
+      text-align: center;
+      align-items: center;
+    }
+  }
 
- .bs-card-stars span {
-   color: var(--ink-light);
-   font-size: 11px;
-   margin-left: 2px;
- }
-
- /* --- EDITORIAL BANNERS (eb-*) --- */
- .eb-sec {
-   padding: 96px 0;
- }
-
- .eb-sec-white {
-   background: var(--white);
- }
-
- .eb-grid {
-   display: grid;
-   grid-template-columns: 5fr 3fr;
-   grid-template-rows: auto auto;
-   gap: 16px;
- }
-
- .eb-banner {
-   border-radius: 24px;
-   overflow: hidden;
-   position: relative;
-   display: flex;
-   align-items: flex-end;
-   padding: 40px;
-   cursor: pointer;
-   min-height: 320px;
-   transition: transform .5s var(--ease), box-shadow .5s var(--ease);
- }
-
- .eb-banner:hover {
-   transform: scale(1.015) translateY(-2px);
-   box-shadow: 0 24px 52px rgba(0, 0, 0, .18);
- }
-
- .eb-tall {
-   grid-row: span 2;
-   min-height: 480px;
- }
-
- .eb-banner-bg {
-   position: absolute;
-   inset: 0;
-   transition: transform .8s var(--ease);
-   z-index: 1;
- }
-
- .eb-banner:hover .eb-banner-bg {
-   transform: scale(1.1);
- }
-
- .eb-banner-overlay {
-   position: absolute;
-   inset: 0;
-   background: linear-gradient(to top, rgba(0, 0, 0, .75) 0%, transparent 60%);
-   z-index: 2;
-   transition: opacity .4s;
- }
-
- .eb-banner:hover .eb-banner-overlay {
-   opacity: 0.9;
- }
-
- .eb-banner-icon {
-   position: absolute;
-   right: 32px;
-   top: 50%;
-   transform: translateY(-50%) rotate(-8deg);
-   font-size: 90px;
-   opacity: .18;
-   z-index: 3;
-   transition: all .6s var(--ease);
-   pointer-events: none;
- }
-
- .eb-banner:hover .eb-banner-icon {
-   opacity: .25;
-   transform: translateY(-54%) rotate(2deg) scale(1.15);
- }
-
- .eb-item-1 {
-   background: linear-gradient(145deg, #003548, #004F69);
- }
-
- .eb-item-2 {
-   background: linear-gradient(145deg, #2D3A1A, #595F39);
- }
-
- .eb-item-3 {
-   background: linear-gradient(145deg, #6B4E38, #B89B82);
- }
-
- .eb-banner-content {
-   position: relative;
-   z-index: 10;
- }
-
- .eb-banner-tag {
-   font-size: 10px;
-   font-weight: 700;
-   letter-spacing: .22em;
-   text-transform: uppercase;
-   color: rgba(255, 255, 255, .6);
-   margin-bottom: 10px;
-   display: block;
-   transition: color .3s;
- }
-
- .eb-banner:hover .eb-banner-tag {
-   color: var(--gold);
- }
-
- .eb-banner-title {
-   font-family: var(--serif);
-   font-size: clamp(22px, 2.4vw, 32px);
-   font-weight: 700;
-   color: var(--white);
-   line-height: 1.2;
-   margin-bottom: 20px;
-   transition: transform .4s var(--ease);
- }
-
- .eb-banner:hover .eb-banner-title {
-   transform: translateY(-4px);
- }
-
- .eb-banner-link {
-   display: inline-flex;
-   align-items: center;
-   gap: 8px;
-   font-size: 11.5px;
-   font-weight: 600;
-   letter-spacing: .12em;
-   text-transform: uppercase;
-   color: var(--white);
-   border-bottom: 2px solid rgba(255, 255, 255, .3);
-   padding-bottom: 4px;
-   transition: all .3s var(--ease);
- }
-
- .eb-banner-link:hover {
-   gap: 14px;
-   border-color: var(--white);
-   color: var(--gold);
- }

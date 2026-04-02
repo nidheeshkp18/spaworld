@@ -1,7 +1,9 @@
 :root {
   /* Modern Marketplace Palette */
-  --font-display: 'Playfair Display', serif;
-  --font-ui: 'Inter', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-ui: 'Poppins', sans-serif;
+  --sans: 'Poppins', sans-serif;
+  --serif: 'Poppins', sans-serif;
 
   --ink: #1f2d1c;
   --ink-mid: #3a4738;
@@ -40,7 +42,7 @@ html {
 }
 
 body {
-  font-family: var(--font-ui);
+  font-family: 'Poppins', sans-serif;
   background: var(--white);
   color: var(--ink);
   line-height: 1.6;
@@ -123,7 +125,7 @@ body {
 }
 
 .logo-main {
-  font-family: var(--font-display);
+  font-family: 'Poppins', sans-serif;
   font-size: 34px;
   font-weight: 900;
   color: var(--ink);
@@ -835,7 +837,7 @@ body {
 }
 
 .sc-title {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   color: var(--ink);
   margin-bottom: 8px;
@@ -864,12 +866,9 @@ body {
   gap: 30px;
 }
 
-.na-card {
-  background: var(--white);
-  border-radius: 20px;
-  padding: 15px;
-  transition: all 0.4s var(--ease);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+.na2-card {
+    background: var(--white);
+    border: 1.5px solid #eeece8;
   position: relative;
   overflow: hidden;
 }
@@ -936,7 +935,7 @@ body {
 }
 
 .na-card-name {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 17px;
   color: var(--ink);
   margin-bottom: 15px;
@@ -956,7 +955,7 @@ body {
 }
 
 .na-card-price {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--gold);
@@ -1167,14 +1166,14 @@ body {
 }
 
 .bs-card-price {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--teal);
 }
 
 .bs-card-was {
-  font-family: var(--sans);
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: var(--ink-light);
   text-decoration: line-through;
@@ -1302,7 +1301,7 @@ body {
 }
 
 .estat-n {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
   color: var(--gold-dark);
@@ -1404,7 +1403,7 @@ body {
   gap: 15px;
   align-items: center;
   color: var(--gold);
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 28px;
   font-weight: 700;
 }
@@ -1559,11 +1558,11 @@ body {
   font-size: 22px;
   font-weight: 800;
   color: var(--teal);
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
 }
 
 .lo-card-name {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--ink);
@@ -1630,7 +1629,7 @@ body {
 }
 
 .fcol h5 {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   color: var(--gold);
   margin-bottom: 30px;
@@ -1979,7 +1978,7 @@ body {
 }
 
 .rv-text {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-style: italic;
   color: var(--ink-mid);
@@ -2025,7 +2024,7 @@ body {
 }
 
 .nl-text h3 {
-  font-family: var(--serif);
+  font-family: 'Poppins', sans-serif;
   font-size: 42px;
   margin-bottom: 20px;
 }
@@ -2178,7 +2177,7 @@ body {
   font-size: 42px;
   color: var(--ink);
   margin-bottom: 12px;
-  font-family: var(--font-display);
+  font-family: 'Poppins', sans-serif;
 }
 
 .sec-title em {
@@ -2224,3 +2223,7 @@ ec-head .sec-rule {
   background: var(--gold);
   margin: 0 auto;
 }
+
+
+
+

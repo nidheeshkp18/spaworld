@@ -3370,145 +3370,221 @@
  }
 
  /* --- EDITORIAL BANNERS (eb-*) --- */
- .eb-sec {
-   padding: 96px 0;
- }
+  .eb-sec {
+    padding: 120px 0;
+    background: #ffffff;
+  }
 
- .eb-sec-white {
-   background: var(--white);
- }
+  .eb-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 
- .eb-grid {
-   display: grid;
-   grid-template-columns: 5fr 3fr;
-   grid-template-rows: auto auto;
-   gap: 16px;
- }
+  .eb-banner {
+    border-radius: 48px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    cursor: pointer;
+    transition: all .8s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+  }
 
- .eb-banner {
-   border-radius: 24px;
-   overflow: hidden;
-   position: relative;
-   display: flex;
-   align-items: flex-end;
-   padding: 40px;
-   cursor: pointer;
-   min-height: 320px;
-   transition: transform .5s var(--ease), box-shadow .5s var(--ease);
- }
+  /* Item 1 Vertical Layout */
+  .eb-item-1 {
+    flex-direction: column;
+  }
 
- .eb-banner:hover {
-   transform: scale(1.015) translateY(-2px);
-   box-shadow: 0 24px 52px rgba(0, 0, 0, .18);
- }
+  .eb-banner:hover {
+    transform: translateY(-12px) scale(1.005);
+    box-shadow: 0 60px 120px rgba(0, 0, 0, 0.1);
+  }
 
- .eb-tall {
-   grid-row: span 2;
-   min-height: 480px;
- }
+  .eb-tall {
+    grid-row: span 2;
+  }
 
- .eb-banner-bg {
-   position: absolute;
-   inset: 0;
-   transition: transform .8s var(--ease);
-   z-index: 1;
- }
+  .eb-banner-bg, .eb-banner-overlay {
+    display: none;
+  }
 
- .eb-banner:hover .eb-banner-bg {
-   transform: scale(1.1);
- }
+  /* Attractive "Vibrant Wellness" Image Backgrounds */
+  .eb-banner-icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    padding: 40px;
+    transition: all 0.6s var(--ease);
+  }
 
- .eb-banner-overlay {
-   position: absolute;
-   inset: 0;
-   background: linear-gradient(to top, rgba(0, 0, 0, .75) 0%, transparent 60%);
-   z-index: 2;
-   transition: opacity .4s;
- }
+  /* Colorful and "Attractive" Studio Spotlights */
+  .eb-item-1 .eb-banner-icon {
+    background: radial-gradient(circle at center, #ffffff 0%, #e0f2f7 50%, #c5e6f0 100%);
+    flex: 1.2;
+  }
+  
+  .eb-item-2 .eb-banner-icon { 
+    background: radial-gradient(circle at center, #ffffff 0%, #f4f8e6 50%, #e8efcf 100%);
+  }
+  
+  .eb-item-3 .eb-banner-icon { 
+    background: radial-gradient(circle at center, #ffffff 0%, #f9f4ec 50%, #f0e6d6 100%);
+  }
+  
+  /* Accent light highlight on hover */
+  .eb-banner-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s var(--ease);
+    z-index: 2;
+  }
 
- .eb-banner:hover .eb-banner-overlay {
-   opacity: 0.9;
- }
+  .eb-banner:hover .eb-banner-icon::before {
+    opacity: 1;
+  }
 
- .eb-banner-icon {
-   position: absolute;
-   right: 32px;
-   top: 50%;
-   transform: translateY(-50%) rotate(-8deg);
-   font-size: 90px;
-   opacity: .18;
-   z-index: 3;
-   transition: all .6s var(--ease);
-   pointer-events: none;
- }
+  .eb-banner-icon img {
+    max-width: 85%;
+    max-height: 80%;
+    object-fit: contain;
+    position: relative;
+    z-index: 10;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.12));
+  }
 
- .eb-banner:hover .eb-banner-icon {
-   opacity: .25;
-   transform: translateY(-54%) rotate(2deg) scale(1.15);
- }
+  .eb-banner:hover .eb-banner-icon img {
+    transform: scale(1.18) rotate(3deg) translateY(-12px);
+    filter: drop-shadow(0 50px 80px rgba(0, 0, 0, 0.18));
+  }
 
- .eb-item-1 {
-   background: linear-gradient(145deg, #003548, #004F69);
- }
+  .eb-banner-content {
+    flex: 1.1;
+    padding: 60px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.4s var(--ease);
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Soft split line */
+  }
 
- .eb-item-2 {
-   background: linear-gradient(145deg, #2D3A1A, #595F39);
- }
+  .eb-tall .eb-banner-content {
+    padding: 80px 60px;
+    text-align: center;
+    align-items: center;
+  }
 
- .eb-item-3 {
-   background: linear-gradient(145deg, #6B4E38, #B89B82);
- }
+  /* Vibrant Attractive Content Gradients */
+  .eb-item-1 .eb-banner-content { background: linear-gradient(145deg, #00445a 0%, #004f69 50%, #006380 100%); }
+  .eb-item-2 .eb-banner-content { background: linear-gradient(145deg, #3f4f1e 0%, #4a5d23 50%, #60792d 100%); }
+  .eb-item-3 .eb-banner-content { background: linear-gradient(145deg, #8b6e5b 0%, #a0816c 50%, #ba9b85 100%); }
 
- .eb-banner-content {
-   position: relative;
-   z-index: 10;
- }
+  .eb-banner-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 28px;
+    display: block;
+  }
 
- .eb-banner-tag {
-   font-size: 10px;
-   font-weight: 700;
-   letter-spacing: .22em;
-   text-transform: uppercase;
-   color: rgba(255, 255, 255, .6);
-   margin-bottom: 10px;
-   display: block;
-   transition: color .3s;
- }
+  .eb-banner-title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.2vw, 48px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Extra contrast */
+  }
 
- .eb-banner:hover .eb-banner-tag {
-   color: var(--gold);
- }
+  .eb-item-2 .eb-banner-title,
+  .eb-item-3 .eb-banner-title {
+    font-size: clamp(22px, 2.5vw, 36px);
+  }
 
- .eb-banner-title {
-   font-family: var(--serif);
-   font-size: clamp(22px, 2.4vw, 32px);
-   font-weight: 700;
-   color: var(--white);
-   line-height: 1.2;
-   margin-bottom: 20px;
-   transition: transform .4s var(--ease);
- }
+  .eb-banner-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    transition: all .4s var(--ease);
+    position: relative;
+    padding-bottom: 10px;
+    text-decoration: none;
+  }
 
- .eb-banner:hover .eb-banner-title {
-   transform: translateY(-4px);
- }
+  .eb-banner-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2.5px;
+    background: currentColor;
+    transition: width 0.4s var(--ease);
+    opacity: 0.7;
+  }
 
- .eb-banner-link {
-   display: inline-flex;
-   align-items: center;
-   gap: 8px;
-   font-size: 11.5px;
-   font-weight: 600;
-   letter-spacing: .12em;
-   text-transform: uppercase;
-   color: var(--white);
-   border-bottom: 2px solid rgba(255, 255, 255, .3);
-   padding-bottom: 4px;
-   transition: all .3s var(--ease);
- }
+  .eb-banner:hover .eb-banner-link {
+    color: #ffffff;
+    gap: 24px;
+    letter-spacing: .3em;
+  }
 
- .eb-banner-link:hover {
-   gap: 14px;
-   border-color: var(--white);
-   color: var(--gold);
- }
+  .eb-banner:hover .eb-banner-link::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  @media (max-width: 1100px) {
+    .eb-grid {
+      grid-template-columns: 1fr;
+      padding: 0 24px;
+    }
+    .eb-tall {
+      grid-row: span 1;
+    }
+    .eb-banner {
+      min-height: 480px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .eb-banner {
+      flex-direction: column;
+    }
+    .eb-banner-icon {
+      height: 350px;
+      flex: none;
+    }
+    .eb-banner-content {
+      padding: 60px 40px;
+      flex: none;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
